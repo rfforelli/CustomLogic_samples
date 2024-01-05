@@ -1,0 +1,24 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /data/rforelli/Xilinx_2018/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/data/rforelli/Xilinx_2018/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'rforelli' on host 'correlator4.fnal.gov' (Linux_x86_64 version 3.10.0-1160.102.1.el7.x86_64) on Wed Jan 03 18:30:50 CST 2024
+INFO: [HLS 200-10] On os "Scientific Linux release 7.9 (Nitrogen)"
+INFO: [HLS 200-10] In directory '/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_v3/05_model_design_hls'
+05_model_design_hls/scripts/run_hls.tcl can't be opened.
+couldn't read file "05_model_design_hls/scripts/run_hls.tcl": no such file or directory
+    while executing
+"source 05_model_design_hls/scripts/run_hls.tcl"
+    invoked from within
+"hls::main 05_model_design_hls/scripts/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+INFO: [Common 17-206] Exiting vivado_hls at Wed Jan  3 18:30:50 2024...
