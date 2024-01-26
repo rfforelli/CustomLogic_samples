@@ -1,0 +1,209 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject_axi'
+================================================================
+* Date:           Tue Jan 23 17:37:08 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.616|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "%MetaIn_StreamId_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_StreamId)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 5 'read' 'MetaIn_StreamId_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%MetaIn_SourceTag_rea = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_SourceTag)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 6 'read' 'MetaIn_SourceTag_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%MetaIn_Xsize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xsize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 7 'read' 'MetaIn_Xsize_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%MetaIn_Xoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 8 'read' 'MetaIn_Xoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%MetaIn_Ysize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Ysize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 9 'read' 'MetaIn_Ysize_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%MetaIn_Yoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Yoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 10 'read' 'MetaIn_Yoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (0.00ns)   --->   "%MetaIn_DsizeL_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_DsizeL_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 11 'read' 'MetaIn_DsizeL_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "%MetaIn_PixelF_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_PixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 12 'read' 'MetaIn_PixelF_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%MetaIn_TapG_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_TapG)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 13 'read' 'MetaIn_TapG_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (0.00ns)   --->   "%MetaIn_Flags_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_Flags)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 14 'read' 'MetaIn_Flags_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "%MetaIn_Timestamp_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Timestamp)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 15 'read' 'MetaIn_Timestamp_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (0.00ns)   --->   "%MetaIn_PixProcessing = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_PixProcessingFlgs)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 16 'read' 'MetaIn_PixProcessing' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.00ns)   --->   "%MetaIn_ModPixelF_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_ModPixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 17 'read' 'MetaIn_ModPixelF_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (0.00ns)   --->   "%MetaIn_Status_read = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Status)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 18 'read' 'MetaIn_Status_read' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 19 [1/2] (0.00ns)   --->   "%MetaIn_StreamId_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_StreamId)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 19 'read' 'MetaIn_StreamId_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/2] (0.00ns)   --->   "%MetaIn_SourceTag_rea = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_SourceTag)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 20 'read' 'MetaIn_SourceTag_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/2] (0.00ns)   --->   "%MetaIn_Xsize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xsize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 21 'read' 'MetaIn_Xsize_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (0.00ns)   --->   "%MetaIn_Xoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 22 'read' 'MetaIn_Xoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.00ns)   --->   "%MetaIn_Ysize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Ysize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 23 'read' 'MetaIn_Ysize_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (0.00ns)   --->   "%MetaIn_Yoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Yoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 24 'read' 'MetaIn_Yoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%MetaIn_DsizeL_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_DsizeL_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 25 'read' 'MetaIn_DsizeL_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%MetaIn_PixelF_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_PixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 26 'read' 'MetaIn_PixelF_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/2] (0.00ns)   --->   "%MetaIn_TapG_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_TapG)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 27 'read' 'MetaIn_TapG_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (0.00ns)   --->   "%MetaIn_Flags_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_Flags)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 28 'read' 'MetaIn_Flags_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (0.00ns)   --->   "%MetaIn_Timestamp_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Timestamp)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 29 'read' 'MetaIn_Timestamp_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] (0.00ns)   --->   "%MetaIn_PixProcessing = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_PixProcessingFlgs)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 30 'read' 'MetaIn_PixProcessing' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/2] (0.00ns)   --->   "%MetaIn_ModPixelF_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_ModPixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 31 'read' 'MetaIn_ModPixelF_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/2] (0.00ns)   --->   "%MetaIn_Status_read = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Status)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 32 'read' 'MetaIn_Status_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_StreamId, i8 %MetaIn_StreamId_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 33 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_SourceTag, i16 %MetaIn_SourceTag_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 34 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Xsize_V, i24 %MetaIn_Xsize_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 35 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Xoffs_V, i24 %MetaIn_Xoffs_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 36 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Ysize_V, i24 %MetaIn_Ysize_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 37 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Yoffs_V, i24 %MetaIn_Yoffs_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 38 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_DsizeL_V, i24 %MetaIn_DsizeL_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 39 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_PixelF, i16 %MetaIn_PixelF_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 40 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_TapG, i16 %MetaIn_TapG_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 41 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_Flags, i8 %MetaIn_Flags_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 42 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_Timestamp, i32 %MetaIn_Timestamp_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 43 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_PixProcessingFlgs, i8 %MetaIn_PixProcessing)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 44 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_ModPixelF, i32 %MetaIn_ModPixelF_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 45 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_Status, i32 %MetaIn_Status_read)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 46 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (0.00ns)   --->   "call fastcc void @myproject(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:21]   --->   Operation 47 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 48 [1/2] (0.00ns)   --->   "call fastcc void @myproject(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:21]   --->   Operation 48 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %VideoIn_V_Data_V), !map !117"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %VideoIn_V_User_V), !map !121"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %VideoOut_V_Data_V), !map !125"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %VideoOut_V_User_V), !map !129"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_StreamId), !map !133"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_SourceTag), !map !137"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Xsize_V), !map !141"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Xoffs_V), !map !145"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Ysize_V), !map !149"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Yoffs_V), !map !153"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_DsizeL_V), !map !157"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_PixelF), !map !161"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_TapG), !map !165"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_Flags), !map !169"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_Timestamp), !map !173"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_PixProcessingFlgs), !map !177"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_ModPixelF), !map !181"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_Status), !map !185"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_StreamId), !map !189"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_SourceTag), !map !193"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Xsize_V), !map !197"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Xoffs_V), !map !201"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Ysize_V), !map !205"   --->   Operation 71 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Yoffs_V), !map !209"   --->   Operation 72 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_DsizeL_V), !map !213"   --->   Operation 73 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_PixelF), !map !217"   --->   Operation 74 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_TapG), !map !221"   --->   Operation 75 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_Flags), !map !225"   --->   Operation 76 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_Timestamp), !map !229"   --->   Operation 77 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_PixProcessingFlgs), !map !233"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_ModPixelF), !map !237"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_Status), !map !241"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @myproject_axi_str) nounwind"   --->   Operation 81 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %MetaOut_StreamId, i16* %MetaOut_SourceTag, i24* %MetaOut_Xsize_V, i24* %MetaOut_Xoffs_V, i24* %MetaOut_Ysize_V, i24* %MetaOut_Yoffs_V, i24* %MetaOut_DsizeL_V, i16* %MetaOut_PixelF, i16* %MetaOut_TapG, i8* %MetaOut_Flags, i32* %MetaOut_Timestamp, i8* %MetaOut_PixProcessingFlgs, i32* %MetaOut_ModPixelF, i32* %MetaOut_Status, [8 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:13]   --->   Operation 82 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %MetaIn_StreamId, i16* %MetaIn_SourceTag, i24* %MetaIn_Xsize_V, i24* %MetaIn_Xoffs_V, i24* %MetaIn_Ysize_V, i24* %MetaIn_Yoffs_V, i24* %MetaIn_DsizeL_V, i16* %MetaIn_PixelF, i16* %MetaIn_TapG, i8* %MetaIn_Flags, i32* %MetaIn_Timestamp, i8* %MetaIn_PixProcessingFlgs, i32* %MetaIn_ModPixelF, i32* %MetaIn_Status, [7 x i8]* @p_str211, i32 1, i32 1, [1 x i8]* @p_str110, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:14]   --->   Operation 83 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, [5 x i8]* @p_str312, i32 1, i32 1, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:16]   --->   Operation 84 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V, [5 x i8]* @p_str312, i32 1, i32 1, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:17]   --->   Operation 85 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "ret void" [/home/rforelli/MSU_work/CustomLogic_samples/03_fw_sample_average_499frames/05_model_design_hls/srcs/myproject_axi.cpp:23]   --->   Operation 86 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2ns, clock uncertainty: 0.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

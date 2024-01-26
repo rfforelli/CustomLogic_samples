@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vivado HLS Report for 'read_pixel_data'
+================================================================
+* Date:           Tue Jan 23 17:37:09 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     0.835|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- FrameLoop     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + WriteInLoop  |    ?|    ?|         1|          1|          1|     ?|    yes   |
+        +----------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      16|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       -|       -|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     159|
+|Register         |        -|      -|     153|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|     153|     175|
++-----------------+---------+-------+--------+--------+
+|Available        |     1080|   1700|  406256|  203128|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |StreamOut_V_Data_V1_status      |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3                 |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_107                |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op23_write_state2  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op33_write_state3  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state1                 |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2                 |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4                 |    or    |      0|  0|   2|           1|           1|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+    |Total                           |          |      0|  0|  16|           8|           8|
+    +--------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |DataBuf_User_V_3_reg_154                   |   9|          2|    4|          8|
+    |StreamOut_V_Data_V_blk_n                   |   9|          2|    1|          2|
+    |StreamOut_V_Data_V_din                     |  15|          3|  128|        384|
+    |StreamOut_V_User_V_blk_n                   |   9|          2|    1|          2|
+    |StreamOut_V_User_V_din                     |  21|          4|    4|         16|
+    |VideoIn_TDATA_blk_n                        |   9|          2|    1|          2|
+    |ap_NS_fsm                                  |  33|          6|    1|          6|
+    |ap_done                                    |   9|          2|    1|          2|
+    |ap_phi_mux_DataBuf_User_V_3_phi_fu_158_p4  |   9|          2|    4|          8|
+    |p_Val2_3_reg_103                           |   9|          2|    4|          8|
+    |p_Val2_s_reg_116                           |   9|          2|    4|          8|
+    |real_start                                 |   9|          2|    1|          2|
+    |tmp_User_V_6_reg_142                       |   9|          2|    4|          8|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      | 159|         33|  158|        456|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+-----+----+-----+-----------+
+    |           Name           |  FF | LUT| Bits| Const Bits|
+    +--------------------------+-----+----+-----+-----------+
+    |DataBuf_Data_V            |  128|   0|  128|          0|
+    |DataBuf_User_V_3_reg_154  |    4|   0|    4|          0|
+    |ap_CS_fsm                 |    5|   0|    5|          0|
+    |ap_done_reg               |    1|   0|    1|          0|
+    |inFrame_reg_128           |    1|   0|    1|          0|
+    |p_Val2_3_reg_103          |    4|   0|    4|          0|
+    |p_Val2_s_reg_116          |    4|   0|    4|          0|
+    |start_once_reg            |    1|   0|    1|          0|
+    |tmp_6_reg_247             |    1|   0|    1|          0|
+    |tmp_User_V_6_reg_142      |    4|   0|    4|          0|
+    +--------------------------+-----+----+-----+-----------+
+    |Total                     |  153|   0|  153|          0|
+    +--------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++---------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|start_full_n               |  in |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_continue                |  in |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|start_out                  | out |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|start_write                | out |    1| ap_ctrl_hs |   read_pixel_data  | return value |
+|VideoIn_TDATA              |  in |  128|    axis    |  StreamIn_V_Data_V |    pointer   |
+|VideoIn_TVALID             |  in |    1|    axis    |  StreamIn_V_Data_V |    pointer   |
+|VideoIn_TREADY             | out |    1|    axis    |  StreamIn_V_User_V |    pointer   |
+|VideoIn_TUSER              |  in |    4|    axis    |  StreamIn_V_User_V |    pointer   |
+|StreamOut_V_Data_V_din     | out |  128|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_Data_V_full_n  |  in |    1|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_Data_V_write   | out |    1|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_User_V_din     | out |    4|   ap_fifo  | StreamOut_V_User_V |    pointer   |
+|StreamOut_V_User_V_full_n  |  in |    1|   ap_fifo  | StreamOut_V_User_V |    pointer   |
+|StreamOut_V_User_V_write   | out |    1|   ap_fifo  | StreamOut_V_User_V |    pointer   |
++---------------------------+-----+-----+------------+--------------------+--------------+
+

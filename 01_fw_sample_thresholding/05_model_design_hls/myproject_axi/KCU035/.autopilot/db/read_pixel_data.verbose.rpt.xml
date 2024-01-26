@@ -1,0 +1,153 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'read_pixel_data'" level="0">
+<item name = "Date">Tue Jan 23 17:36:48 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">myproject_axi</item>
+<item name = "Solution">KCU035</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku035-fbva676-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.00, 0.835, 0.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- FrameLoop">?, ?, ?, -, -, ?, no</column>
+<column name=" + WriteInLoop">?, ?, 1, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 16</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 159</column>
+<column name="Register">-, -, 153, -</column>
+<specialColumn name="Available">1080, 1700, 406256, 203128</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="StreamOut_V_Data_V1_status">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_107">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op23_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op33_write_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state4">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="DataBuf_User_V_3_reg_154">9, 2, 4, 8</column>
+<column name="StreamOut_V_Data_V_blk_n">9, 2, 1, 2</column>
+<column name="StreamOut_V_Data_V_din">15, 3, 128, 384</column>
+<column name="StreamOut_V_User_V_blk_n">9, 2, 1, 2</column>
+<column name="StreamOut_V_User_V_din">21, 4, 4, 16</column>
+<column name="VideoIn_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">33, 6, 1, 6</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="ap_phi_mux_DataBuf_User_V_3_phi_fu_158_p4">9, 2, 4, 8</column>
+<column name="p_Val2_3_reg_103">9, 2, 4, 8</column>
+<column name="p_Val2_s_reg_116">9, 2, 4, 8</column>
+<column name="real_start">9, 2, 1, 2</column>
+<column name="tmp_User_V_6_reg_142">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="DataBuf_Data_V">128, 0, 128, 0</column>
+<column name="DataBuf_User_V_3_reg_154">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="inFrame_reg_128">1, 0, 1, 0</column>
+<column name="p_Val2_3_reg_103">4, 0, 4, 0</column>
+<column name="p_Val2_s_reg_116">4, 0, 4, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+<column name="tmp_6_reg_247">1, 0, 1, 0</column>
+<column name="tmp_User_V_6_reg_142">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, read_pixel_data, return value</column>
+<column name="VideoIn_TDATA">in, 128, axis, StreamIn_V_Data_V, pointer</column>
+<column name="VideoIn_TVALID">in, 1, axis, StreamIn_V_Data_V, pointer</column>
+<column name="VideoIn_TREADY">out, 1, axis, StreamIn_V_User_V, pointer</column>
+<column name="VideoIn_TUSER">in, 4, axis, StreamIn_V_User_V, pointer</column>
+<column name="StreamOut_V_Data_V_din">out, 128, ap_fifo, StreamOut_V_Data_V, pointer</column>
+<column name="StreamOut_V_Data_V_full_n">in, 1, ap_fifo, StreamOut_V_Data_V, pointer</column>
+<column name="StreamOut_V_Data_V_write">out, 1, ap_fifo, StreamOut_V_Data_V, pointer</column>
+<column name="StreamOut_V_User_V_din">out, 4, ap_fifo, StreamOut_V_User_V, pointer</column>
+<column name="StreamOut_V_User_V_full_n">in, 1, ap_fifo, StreamOut_V_User_V, pointer</column>
+<column name="StreamOut_V_User_V_write">out, 1, ap_fifo, StreamOut_V_User_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

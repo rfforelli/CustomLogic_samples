@@ -1,0 +1,13 @@
+myproject_axi_mul_23ns_21ns_44_6_1
+pix_average_sum_V_0
+fifo_w128_d10240_A
+fifo_w4_d10240_A
+fifo_w128_d10240_A
+fifo_w4_d10240_A
+start_for_pix_average_U0
+start_for_send_output_U0
+read_pixel_data
+pix_average
+send_output
+myproject
+myproject_axi

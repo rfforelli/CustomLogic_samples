@@ -1,0 +1,1828 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject_axi'
+================================================================
+* Date:           Tue Jan 23 17:36:59 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.534|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+        |                      |           |  Latency  |  Interval | Pipeline |
+        |       Instance       |   Module  | min | max | min | max |   Type   |
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+        |grp_myproject_fu_320  |myproject  |    ?|    ?|    ?|    ?| dataflow |
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      58|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |      214|      -|    2198|    4066|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     393|
+|Register         |        -|      -|    1141|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |      214|      0|    3339|    4517|
++-----------------+---------+-------+--------+--------+
+|Available        |     1080|   1700|  406256|  203128|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |       19|      0|   ~0   |       2|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------+---------+-------+------+------+
+    |       Instance       |   Module  | BRAM_18K| DSP48E|  FF  |  LUT |
+    +----------------------+-----------+---------+-------+------+------+
+    |grp_myproject_fu_320  |myproject  |      214|      0|  2198|  4066|
+    +----------------------+-----------+---------+-------+------+------+
+    |Total                 |           |      214|      0|  2198|  4066|
+    +----------------------+-----------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |VideoIn_V_Data_V_0_load_A              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_Data_V_0_load_B              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_User_V_0_load_A              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_User_V_0_load_B              |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_Data_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_Data_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_User_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_User_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_Data_V_0_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |VideoIn_V_User_V_0_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |VideoOut_V_Data_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |VideoOut_V_User_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state2                        |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4                        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_myproject_fu_320_ap_done   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_myproject_fu_320_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |grp_myproject_fu_320_VideoOut_TREADY   |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                  |          |      0|  0|  58|          21|          17|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |MetaIn_DsizeL_V_ap_vld_preg           |   9|          2|    1|          2|
+    |MetaIn_Flags_ap_vld_preg              |   9|          2|    1|          2|
+    |MetaIn_ModPixelF_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_PixProcessingFlgs_ap_vld_preg  |   9|          2|    1|          2|
+    |MetaIn_PixelF_ap_vld_preg             |   9|          2|    1|          2|
+    |MetaIn_SourceTag_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_Status_ap_vld_preg             |   9|          2|    1|          2|
+    |MetaIn_StreamId_ap_vld_preg           |   9|          2|    1|          2|
+    |MetaIn_TapG_ap_vld_preg               |   9|          2|    1|          2|
+    |MetaIn_Timestamp_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_Xoffs_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Xsize_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Yoffs_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Ysize_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaOut_DsizeL_V                      |   9|          2|   24|         48|
+    |MetaOut_Flags                         |   9|          2|    8|         16|
+    |MetaOut_ModPixelF                     |   9|          2|   32|         64|
+    |MetaOut_PixProcessingFlgs             |   9|          2|    8|         16|
+    |MetaOut_PixelF                        |   9|          2|   16|         32|
+    |MetaOut_SourceTag                     |   9|          2|   16|         32|
+    |MetaOut_Status                        |   9|          2|   32|         64|
+    |MetaOut_StreamId                      |   9|          2|    8|         16|
+    |MetaOut_TapG                          |   9|          2|   16|         32|
+    |MetaOut_Timestamp                     |   9|          2|   32|         64|
+    |MetaOut_Xoffs_V                       |   9|          2|   24|         48|
+    |MetaOut_Xsize_V                       |   9|          2|   24|         48|
+    |MetaOut_Yoffs_V                       |   9|          2|   24|         48|
+    |MetaOut_Ysize_V                       |   9|          2|   24|         48|
+    |VideoIn_V_Data_V_0_ack_out            |   9|          2|    1|          2|
+    |VideoIn_V_Data_V_0_data_out           |   9|          2|  128|        256|
+    |VideoIn_V_Data_V_0_state              |  15|          3|    2|          6|
+    |VideoIn_V_User_V_0_ack_out            |   9|          2|    1|          2|
+    |VideoIn_V_User_V_0_data_out           |   9|          2|    4|          8|
+    |VideoIn_V_User_V_0_state              |  15|          3|    2|          6|
+    |VideoOut_V_Data_V_1_data_out          |   9|          2|  128|        256|
+    |VideoOut_V_Data_V_1_state             |  15|          3|    2|          6|
+    |VideoOut_V_User_V_1_data_out          |   9|          2|    4|          8|
+    |VideoOut_V_User_V_1_state             |  15|          3|    2|          6|
+    |ap_NS_fsm                             |  27|          5|    1|          5|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 393|         85|  577|       1165|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |MetaIn_DsizeL_V_ap_vld_preg                |    1|   0|    1|          0|
+    |MetaIn_DsizeL_V_preg                       |   24|   0|   24|          0|
+    |MetaIn_Flags_ap_vld_preg                   |    1|   0|    1|          0|
+    |MetaIn_Flags_preg                          |    8|   0|    8|          0|
+    |MetaIn_ModPixelF_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_ModPixelF_preg                      |   32|   0|   32|          0|
+    |MetaIn_PixProcessingFlgs_ap_vld_preg       |    1|   0|    1|          0|
+    |MetaIn_PixProcessingFlgs_preg              |    8|   0|    8|          0|
+    |MetaIn_PixelF_ap_vld_preg                  |    1|   0|    1|          0|
+    |MetaIn_PixelF_preg                         |   16|   0|   16|          0|
+    |MetaIn_SourceTag_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_SourceTag_preg                      |   16|   0|   16|          0|
+    |MetaIn_Status_ap_vld_preg                  |    1|   0|    1|          0|
+    |MetaIn_Status_preg                         |   32|   0|   32|          0|
+    |MetaIn_StreamId_ap_vld_preg                |    1|   0|    1|          0|
+    |MetaIn_StreamId_preg                       |    8|   0|    8|          0|
+    |MetaIn_TapG_ap_vld_preg                    |    1|   0|    1|          0|
+    |MetaIn_TapG_preg                           |   16|   0|   16|          0|
+    |MetaIn_Timestamp_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_Timestamp_preg                      |   32|   0|   32|          0|
+    |MetaIn_Xoffs_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Xoffs_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Xsize_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Xsize_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Yoffs_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Yoffs_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Ysize_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Ysize_V_preg                        |   24|   0|   24|          0|
+    |MetaOut_DsizeL_V_preg                      |   24|   0|   24|          0|
+    |MetaOut_Flags_preg                         |    8|   0|    8|          0|
+    |MetaOut_ModPixelF_preg                     |   32|   0|   32|          0|
+    |MetaOut_PixProcessingFlgs_preg             |    8|   0|    8|          0|
+    |MetaOut_PixelF_preg                        |   16|   0|   16|          0|
+    |MetaOut_SourceTag_preg                     |   16|   0|   16|          0|
+    |MetaOut_Status_preg                        |   32|   0|   32|          0|
+    |MetaOut_StreamId_preg                      |    8|   0|    8|          0|
+    |MetaOut_TapG_preg                          |   16|   0|   16|          0|
+    |MetaOut_Timestamp_preg                     |   32|   0|   32|          0|
+    |MetaOut_Xoffs_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Xsize_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Yoffs_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Ysize_V_preg                       |   24|   0|   24|          0|
+    |VideoIn_V_Data_V_0_payload_A               |  128|   0|  128|          0|
+    |VideoIn_V_Data_V_0_payload_B               |  128|   0|  128|          0|
+    |VideoIn_V_Data_V_0_sel_rd                  |    1|   0|    1|          0|
+    |VideoIn_V_Data_V_0_sel_wr                  |    1|   0|    1|          0|
+    |VideoIn_V_Data_V_0_state                   |    2|   0|    2|          0|
+    |VideoIn_V_User_V_0_payload_A               |    4|   0|    4|          0|
+    |VideoIn_V_User_V_0_payload_B               |    4|   0|    4|          0|
+    |VideoIn_V_User_V_0_sel_rd                  |    1|   0|    1|          0|
+    |VideoIn_V_User_V_0_sel_wr                  |    1|   0|    1|          0|
+    |VideoIn_V_User_V_0_state                   |    2|   0|    2|          0|
+    |VideoOut_V_Data_V_1_payload_A              |  128|   0|  128|          0|
+    |VideoOut_V_Data_V_1_payload_B              |  128|   0|  128|          0|
+    |VideoOut_V_Data_V_1_sel_rd                 |    1|   0|    1|          0|
+    |VideoOut_V_Data_V_1_sel_wr                 |    1|   0|    1|          0|
+    |VideoOut_V_Data_V_1_state                  |    2|   0|    2|          0|
+    |VideoOut_V_User_V_1_payload_A              |    4|   0|    4|          0|
+    |VideoOut_V_User_V_1_payload_B              |    4|   0|    4|          0|
+    |VideoOut_V_User_V_1_sel_rd                 |    1|   0|    1|          0|
+    |VideoOut_V_User_V_1_sel_wr                 |    1|   0|    1|          0|
+    |VideoOut_V_User_V_1_state                  |    2|   0|    2|          0|
+    |ap_CS_fsm                                  |    4|   0|    4|          0|
+    |ap_sync_reg_grp_myproject_fu_320_ap_done   |    1|   0|    1|          0|
+    |ap_sync_reg_grp_myproject_fu_320_ap_ready  |    1|   0|    1|          0|
+    |grp_myproject_fu_320_ap_start_reg          |    1|   0|    1|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      | 1141|   0| 1141|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                           |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_rst_n                         |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_start                         |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_done                          | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_idle                          | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_ready                         | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|VideoIn_TDATA                    |  in |  128|    axis    |      VideoIn_V_Data_V     |    pointer   |
+|VideoIn_TVALID                   |  in |    1|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoIn_TREADY                   | out |    1|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoIn_TUSER                    |  in |    4|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoOut_TDATA                   | out |  128|    axis    |     VideoOut_V_Data_V     |    pointer   |
+|VideoOut_TVALID                  | out |    1|    axis    |     VideoOut_V_User_V     |    pointer   |
+|VideoOut_TREADY                  |  in |    1|    axis    |     VideoOut_V_User_V     |    pointer   |
+|VideoOut_TUSER                   | out |    4|    axis    |     VideoOut_V_User_V     |    pointer   |
+|MetaIn_StreamId                  |  in |    8|   ap_vld   |      MetaIn_StreamId      |    pointer   |
+|MetaIn_StreamId_ap_vld           |  in |    1|   ap_vld   |      MetaIn_StreamId      |    pointer   |
+|MetaIn_SourceTag                 |  in |   16|   ap_vld   |      MetaIn_SourceTag     |    pointer   |
+|MetaIn_SourceTag_ap_vld          |  in |    1|   ap_vld   |      MetaIn_SourceTag     |    pointer   |
+|MetaIn_Xsize_V                   |  in |   24|   ap_vld   |       MetaIn_Xsize_V      |    pointer   |
+|MetaIn_Xsize_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Xsize_V      |    pointer   |
+|MetaIn_Xoffs_V                   |  in |   24|   ap_vld   |       MetaIn_Xoffs_V      |    pointer   |
+|MetaIn_Xoffs_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Xoffs_V      |    pointer   |
+|MetaIn_Ysize_V                   |  in |   24|   ap_vld   |       MetaIn_Ysize_V      |    pointer   |
+|MetaIn_Ysize_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Ysize_V      |    pointer   |
+|MetaIn_Yoffs_V                   |  in |   24|   ap_vld   |       MetaIn_Yoffs_V      |    pointer   |
+|MetaIn_Yoffs_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Yoffs_V      |    pointer   |
+|MetaIn_DsizeL_V                  |  in |   24|   ap_vld   |      MetaIn_DsizeL_V      |    pointer   |
+|MetaIn_DsizeL_V_ap_vld           |  in |    1|   ap_vld   |      MetaIn_DsizeL_V      |    pointer   |
+|MetaIn_PixelF                    |  in |   16|   ap_vld   |       MetaIn_PixelF       |    pointer   |
+|MetaIn_PixelF_ap_vld             |  in |    1|   ap_vld   |       MetaIn_PixelF       |    pointer   |
+|MetaIn_TapG                      |  in |   16|   ap_vld   |        MetaIn_TapG        |    pointer   |
+|MetaIn_TapG_ap_vld               |  in |    1|   ap_vld   |        MetaIn_TapG        |    pointer   |
+|MetaIn_Flags                     |  in |    8|   ap_vld   |        MetaIn_Flags       |    pointer   |
+|MetaIn_Flags_ap_vld              |  in |    1|   ap_vld   |        MetaIn_Flags       |    pointer   |
+|MetaIn_Timestamp                 |  in |   32|   ap_vld   |      MetaIn_Timestamp     |    pointer   |
+|MetaIn_Timestamp_ap_vld          |  in |    1|   ap_vld   |      MetaIn_Timestamp     |    pointer   |
+|MetaIn_PixProcessingFlgs         |  in |    8|   ap_vld   |  MetaIn_PixProcessingFlgs |    pointer   |
+|MetaIn_PixProcessingFlgs_ap_vld  |  in |    1|   ap_vld   |  MetaIn_PixProcessingFlgs |    pointer   |
+|MetaIn_ModPixelF                 |  in |   32|   ap_vld   |      MetaIn_ModPixelF     |    pointer   |
+|MetaIn_ModPixelF_ap_vld          |  in |    1|   ap_vld   |      MetaIn_ModPixelF     |    pointer   |
+|MetaIn_Status                    |  in |   32|   ap_vld   |       MetaIn_Status       |    pointer   |
+|MetaIn_Status_ap_vld             |  in |    1|   ap_vld   |       MetaIn_Status       |    pointer   |
+|MetaOut_StreamId                 | out |    8|   ap_none  |      MetaOut_StreamId     |    pointer   |
+|MetaOut_SourceTag                | out |   16|   ap_none  |     MetaOut_SourceTag     |    pointer   |
+|MetaOut_Xsize_V                  | out |   24|   ap_none  |      MetaOut_Xsize_V      |    pointer   |
+|MetaOut_Xoffs_V                  | out |   24|   ap_none  |      MetaOut_Xoffs_V      |    pointer   |
+|MetaOut_Ysize_V                  | out |   24|   ap_none  |      MetaOut_Ysize_V      |    pointer   |
+|MetaOut_Yoffs_V                  | out |   24|   ap_none  |      MetaOut_Yoffs_V      |    pointer   |
+|MetaOut_DsizeL_V                 | out |   24|   ap_none  |      MetaOut_DsizeL_V     |    pointer   |
+|MetaOut_PixelF                   | out |   16|   ap_none  |       MetaOut_PixelF      |    pointer   |
+|MetaOut_TapG                     | out |   16|   ap_none  |        MetaOut_TapG       |    pointer   |
+|MetaOut_Flags                    | out |    8|   ap_none  |       MetaOut_Flags       |    pointer   |
+|MetaOut_Timestamp                | out |   32|   ap_none  |     MetaOut_Timestamp     |    pointer   |
+|MetaOut_PixProcessingFlgs        | out |    8|   ap_none  | MetaOut_PixProcessingFlgs |    pointer   |
+|MetaOut_ModPixelF                | out |   32|   ap_none  |     MetaOut_ModPixelF     |    pointer   |
+|MetaOut_Status                   | out |   32|   ap_none  |       MetaOut_Status      |    pointer   |
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "%MetaIn_StreamId_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_StreamId)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 5 'read' 'MetaIn_StreamId_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%MetaIn_SourceTag_rea = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_SourceTag)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 6 'read' 'MetaIn_SourceTag_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%MetaIn_Xsize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xsize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 7 'read' 'MetaIn_Xsize_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%MetaIn_Xoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 8 'read' 'MetaIn_Xoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%MetaIn_Ysize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Ysize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 9 'read' 'MetaIn_Ysize_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%MetaIn_Yoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Yoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 10 'read' 'MetaIn_Yoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (0.00ns)   --->   "%MetaIn_DsizeL_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_DsizeL_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 11 'read' 'MetaIn_DsizeL_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "%MetaIn_PixelF_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_PixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 12 'read' 'MetaIn_PixelF_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%MetaIn_TapG_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_TapG)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 13 'read' 'MetaIn_TapG_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (0.00ns)   --->   "%MetaIn_Flags_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_Flags)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 14 'read' 'MetaIn_Flags_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [2/2] (0.00ns)   --->   "%MetaIn_Timestamp_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Timestamp)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 15 'read' 'MetaIn_Timestamp_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (0.00ns)   --->   "%MetaIn_PixProcessing = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_PixProcessingFlgs)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 16 'read' 'MetaIn_PixProcessing' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.00ns)   --->   "%MetaIn_ModPixelF_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_ModPixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 17 'read' 'MetaIn_ModPixelF_rea' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (0.00ns)   --->   "%MetaIn_Status_read = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Status)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 18 'read' 'MetaIn_Status_read' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 19 [1/2] (0.00ns)   --->   "%MetaIn_StreamId_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_StreamId)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 19 'read' 'MetaIn_StreamId_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/2] (0.00ns)   --->   "%MetaIn_SourceTag_rea = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_SourceTag)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 20 'read' 'MetaIn_SourceTag_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/2] (0.00ns)   --->   "%MetaIn_Xsize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xsize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 21 'read' 'MetaIn_Xsize_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (0.00ns)   --->   "%MetaIn_Xoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Xoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 22 'read' 'MetaIn_Xoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.00ns)   --->   "%MetaIn_Ysize_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Ysize_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 23 'read' 'MetaIn_Ysize_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (0.00ns)   --->   "%MetaIn_Yoffs_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_Yoffs_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 24 'read' 'MetaIn_Yoffs_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/2] (0.00ns)   --->   "%MetaIn_DsizeL_V_read = call i24 @_ssdm_op_Read.ap_vld.i24P(i24* %MetaIn_DsizeL_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 25 'read' 'MetaIn_DsizeL_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%MetaIn_PixelF_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_PixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 26 'read' 'MetaIn_PixelF_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/2] (0.00ns)   --->   "%MetaIn_TapG_read = call i16 @_ssdm_op_Read.ap_vld.i16P(i16* %MetaIn_TapG)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 27 'read' 'MetaIn_TapG_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/2] (0.00ns)   --->   "%MetaIn_Flags_read = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_Flags)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 28 'read' 'MetaIn_Flags_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (0.00ns)   --->   "%MetaIn_Timestamp_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Timestamp)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 29 'read' 'MetaIn_Timestamp_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] (0.00ns)   --->   "%MetaIn_PixProcessing = call i8 @_ssdm_op_Read.ap_vld.i8P(i8* %MetaIn_PixProcessingFlgs)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 30 'read' 'MetaIn_PixProcessing' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/2] (0.00ns)   --->   "%MetaIn_ModPixelF_rea = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_ModPixelF)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 31 'read' 'MetaIn_ModPixelF_rea' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/2] (0.00ns)   --->   "%MetaIn_Status_read = call i32 @_ssdm_op_Read.ap_vld.i32P(i32* %MetaIn_Status)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 32 'read' 'MetaIn_Status_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_StreamId, i8 %MetaIn_StreamId_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 33 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_SourceTag, i16 %MetaIn_SourceTag_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 34 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Xsize_V, i24 %MetaIn_Xsize_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 35 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Xoffs_V, i24 %MetaIn_Xoffs_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 36 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Ysize_V, i24 %MetaIn_Ysize_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 37 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_Yoffs_V, i24 %MetaIn_Yoffs_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 38 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i24P(i24* %MetaOut_DsizeL_V, i24 %MetaIn_DsizeL_V_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 39 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_PixelF, i16 %MetaIn_PixelF_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 40 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i16P(i16* %MetaOut_TapG, i16 %MetaIn_TapG_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 41 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_Flags, i8 %MetaIn_Flags_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 42 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_Timestamp, i32 %MetaIn_Timestamp_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 43 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i8P(i8* %MetaOut_PixProcessingFlgs, i8 %MetaIn_PixProcessing)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 44 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_ModPixelF, i32 %MetaIn_ModPixelF_rea)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 45 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %MetaOut_Status, i32 %MetaIn_Status_read)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/CustomLogic.h:11->/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:19]   --->   Operation 46 'write' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (0.00ns)   --->   "call fastcc void @myproject(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:21]   --->   Operation 47 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 48 [1/2] (0.00ns)   --->   "call fastcc void @myproject(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:21]   --->   Operation 48 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %VideoIn_V_Data_V), !map !116"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %VideoIn_V_User_V), !map !120"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %VideoOut_V_Data_V), !map !124"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %VideoOut_V_User_V), !map !128"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_StreamId), !map !132"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_SourceTag), !map !136"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Xsize_V), !map !140"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Xoffs_V), !map !144"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Ysize_V), !map !148"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_Yoffs_V), !map !152"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaIn_DsizeL_V), !map !156"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_PixelF), !map !160"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaIn_TapG), !map !164"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_Flags), !map !168"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_Timestamp), !map !172"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaIn_PixProcessingFlgs), !map !176"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_ModPixelF), !map !180"   --->   Operation 65 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaIn_Status), !map !184"   --->   Operation 66 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_StreamId), !map !188"   --->   Operation 67 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_SourceTag), !map !192"   --->   Operation 68 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Xsize_V), !map !196"   --->   Operation 69 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Xoffs_V), !map !200"   --->   Operation 70 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Ysize_V), !map !204"   --->   Operation 71 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_Yoffs_V), !map !208"   --->   Operation 72 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %MetaOut_DsizeL_V), !map !212"   --->   Operation 73 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_PixelF), !map !216"   --->   Operation 74 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %MetaOut_TapG), !map !220"   --->   Operation 75 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_Flags), !map !224"   --->   Operation 76 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_Timestamp), !map !228"   --->   Operation 77 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %MetaOut_PixProcessingFlgs), !map !232"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_ModPixelF), !map !236"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %MetaOut_Status), !map !240"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @myproject_axi_str) nounwind"   --->   Operation 81 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %MetaOut_StreamId, i16* %MetaOut_SourceTag, i24* %MetaOut_Xsize_V, i24* %MetaOut_Xoffs_V, i24* %MetaOut_Ysize_V, i24* %MetaOut_Yoffs_V, i24* %MetaOut_DsizeL_V, i16* %MetaOut_PixelF, i16* %MetaOut_TapG, i8* %MetaOut_Flags, i32* %MetaOut_Timestamp, i8* %MetaOut_PixProcessingFlgs, i32* %MetaOut_ModPixelF, i32* %MetaOut_Status, [8 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str110, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:13]   --->   Operation 82 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %MetaIn_StreamId, i16* %MetaIn_SourceTag, i24* %MetaIn_Xsize_V, i24* %MetaIn_Xoffs_V, i24* %MetaIn_Ysize_V, i24* %MetaIn_Yoffs_V, i24* %MetaIn_DsizeL_V, i16* %MetaIn_PixelF, i16* %MetaIn_TapG, i8* %MetaIn_Flags, i32* %MetaIn_Timestamp, i8* %MetaIn_PixProcessingFlgs, i32* %MetaIn_ModPixelF, i32* %MetaIn_Status, [7 x i8]* @p_str211, i32 1, i32 1, [1 x i8]* @p_str110, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:14]   --->   Operation 83 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, [5 x i8]* @p_str312, i32 1, i32 1, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:16]   --->   Operation 84 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V, [5 x i8]* @p_str312, i32 1, i32 1, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:17]   --->   Operation 85 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (0.00ns)   --->   "ret void" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject_axi.cpp:23]   --->   Operation 86 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ VideoIn_V_Data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ VideoIn_V_User_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ VideoOut_V_Data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ VideoOut_V_User_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ MetaIn_StreamId]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_SourceTag]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Xsize_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Xoffs_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Ysize_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Yoffs_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_DsizeL_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_PixelF]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_TapG]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Flags]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Timestamp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_PixProcessingFlgs]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_ModPixelF]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaIn_Status]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
+Port [ MetaOut_StreamId]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_SourceTag]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Xsize_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Xoffs_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Ysize_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Yoffs_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_DsizeL_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_PixelF]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_TapG]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Flags]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Timestamp]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_PixProcessingFlgs]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_ModPixelF]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ MetaOut_Status]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ DataBuf_Data_V]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ arbitrator]:  wired=0; compound=0; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=0; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+Port [ buf_V_0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_2]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_4]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_5]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_6]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+Port [ buf_V_7]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=2; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[10]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+MetaIn_StreamId_read (read         ) [ 00000]
+MetaIn_SourceTag_rea (read         ) [ 00000]
+MetaIn_Xsize_V_read  (read         ) [ 00000]
+MetaIn_Xoffs_V_read  (read         ) [ 00000]
+MetaIn_Ysize_V_read  (read         ) [ 00000]
+MetaIn_Yoffs_V_read  (read         ) [ 00000]
+MetaIn_DsizeL_V_read (read         ) [ 00000]
+MetaIn_PixelF_read   (read         ) [ 00000]
+MetaIn_TapG_read     (read         ) [ 00000]
+MetaIn_Flags_read    (read         ) [ 00000]
+MetaIn_Timestamp_rea (read         ) [ 00000]
+MetaIn_PixProcessing (read         ) [ 00000]
+MetaIn_ModPixelF_rea (read         ) [ 00000]
+MetaIn_Status_read   (read         ) [ 00000]
+StgValue_33          (write        ) [ 00000]
+StgValue_34          (write        ) [ 00000]
+StgValue_35          (write        ) [ 00000]
+StgValue_36          (write        ) [ 00000]
+StgValue_37          (write        ) [ 00000]
+StgValue_38          (write        ) [ 00000]
+StgValue_39          (write        ) [ 00000]
+StgValue_40          (write        ) [ 00000]
+StgValue_41          (write        ) [ 00000]
+StgValue_42          (write        ) [ 00000]
+StgValue_43          (write        ) [ 00000]
+StgValue_44          (write        ) [ 00000]
+StgValue_45          (write        ) [ 00000]
+StgValue_46          (write        ) [ 00000]
+StgValue_48          (call         ) [ 00000]
+StgValue_49          (specbitsmap  ) [ 00000]
+StgValue_50          (specbitsmap  ) [ 00000]
+StgValue_51          (specbitsmap  ) [ 00000]
+StgValue_52          (specbitsmap  ) [ 00000]
+StgValue_53          (specbitsmap  ) [ 00000]
+StgValue_54          (specbitsmap  ) [ 00000]
+StgValue_55          (specbitsmap  ) [ 00000]
+StgValue_56          (specbitsmap  ) [ 00000]
+StgValue_57          (specbitsmap  ) [ 00000]
+StgValue_58          (specbitsmap  ) [ 00000]
+StgValue_59          (specbitsmap  ) [ 00000]
+StgValue_60          (specbitsmap  ) [ 00000]
+StgValue_61          (specbitsmap  ) [ 00000]
+StgValue_62          (specbitsmap  ) [ 00000]
+StgValue_63          (specbitsmap  ) [ 00000]
+StgValue_64          (specbitsmap  ) [ 00000]
+StgValue_65          (specbitsmap  ) [ 00000]
+StgValue_66          (specbitsmap  ) [ 00000]
+StgValue_67          (specbitsmap  ) [ 00000]
+StgValue_68          (specbitsmap  ) [ 00000]
+StgValue_69          (specbitsmap  ) [ 00000]
+StgValue_70          (specbitsmap  ) [ 00000]
+StgValue_71          (specbitsmap  ) [ 00000]
+StgValue_72          (specbitsmap  ) [ 00000]
+StgValue_73          (specbitsmap  ) [ 00000]
+StgValue_74          (specbitsmap  ) [ 00000]
+StgValue_75          (specbitsmap  ) [ 00000]
+StgValue_76          (specbitsmap  ) [ 00000]
+StgValue_77          (specbitsmap  ) [ 00000]
+StgValue_78          (specbitsmap  ) [ 00000]
+StgValue_79          (specbitsmap  ) [ 00000]
+StgValue_80          (specbitsmap  ) [ 00000]
+StgValue_81          (spectopmodule) [ 00000]
+StgValue_82          (specinterface) [ 00000]
+StgValue_83          (specinterface) [ 00000]
+StgValue_84          (specinterface) [ 00000]
+StgValue_85          (specinterface) [ 00000]
+StgValue_86          (ret          ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="VideoIn_V_Data_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="VideoIn_V_Data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="VideoIn_V_User_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="VideoIn_V_User_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="VideoOut_V_Data_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="VideoOut_V_Data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="VideoOut_V_User_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="VideoOut_V_User_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="MetaIn_StreamId">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_StreamId"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="MetaIn_SourceTag">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_SourceTag"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="MetaIn_Xsize_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Xsize_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="MetaIn_Xoffs_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Xoffs_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="MetaIn_Ysize_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Ysize_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="MetaIn_Yoffs_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Yoffs_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="MetaIn_DsizeL_V">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_DsizeL_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="MetaIn_PixelF">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_PixelF"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="MetaIn_TapG">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_TapG"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="MetaIn_Flags">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Flags"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="MetaIn_Timestamp">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Timestamp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="MetaIn_PixProcessingFlgs">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_PixProcessingFlgs"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="MetaIn_ModPixelF">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_ModPixelF"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="MetaIn_Status">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaIn_Status"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="MetaOut_StreamId">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_StreamId"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="MetaOut_SourceTag">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_SourceTag"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="MetaOut_Xsize_V">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Xsize_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1000" name="MetaOut_Xoffs_V">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Xoffs_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1000" name="MetaOut_Ysize_V">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Ysize_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1000" name="MetaOut_Yoffs_V">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Yoffs_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1000" name="MetaOut_DsizeL_V">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_DsizeL_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1000" name="MetaOut_PixelF">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_PixelF"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1000" name="MetaOut_TapG">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_TapG"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1000" name="MetaOut_Flags">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Flags"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1000" name="MetaOut_Timestamp">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Timestamp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1000" name="MetaOut_PixProcessingFlgs">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_PixProcessingFlgs"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1000" name="MetaOut_ModPixelF">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_ModPixelF"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1000" name="MetaOut_Status">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MetaOut_Status"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1000" name="DataBuf_Data_V">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DataBuf_Data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1000" name="arbitrator">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arbitrator"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1000" name="buf_V_0">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_0"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1000" name="buf_V_1">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_1"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1000" name="buf_V_2">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_2"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1000" name="buf_V_3">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_3"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1000" name="buf_V_4">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_4"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1000" name="buf_V_5">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_5"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1000" name="buf_V_6">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_6"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1000" name="buf_V_7">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="buf_V_7"/><MemPortTyVec>1 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_vld.i8P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_vld.i16P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_vld.i24P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_vld.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_none.i8P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_none.i16P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_none.i24P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_none.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myproject"/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="myproject_axi_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str110"/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str211"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1001" name="const_118">
+<pin_list>
+<pin id="119" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="120" class="1001" name="const_120">
+<pin_list>
+<pin id="121" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str312"/></StgValue>
+</bind>
+</comp>
+
+<comp id="122" class="1001" name="const_122">
+<pin_list>
+<pin id="123" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str413"/></StgValue>
+</bind>
+</comp>
+
+<comp id="124" class="1004" name="grp_read_fu_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="8" slack="0"/>
+<pin id="126" dir="0" index="1" bw="8" slack="0"/>
+<pin id="127" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_StreamId_read/1 "/>
+</bind>
+</comp>
+
+<comp id="130" class="1004" name="grp_read_fu_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="16" slack="0"/>
+<pin id="132" dir="0" index="1" bw="16" slack="0"/>
+<pin id="133" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_SourceTag_rea/1 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="grp_read_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="24" slack="0"/>
+<pin id="138" dir="0" index="1" bw="24" slack="0"/>
+<pin id="139" dir="1" index="2" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Xsize_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1004" name="grp_read_fu_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="24" slack="0"/>
+<pin id="144" dir="0" index="1" bw="24" slack="0"/>
+<pin id="145" dir="1" index="2" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Xoffs_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="grp_read_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="24" slack="0"/>
+<pin id="150" dir="0" index="1" bw="24" slack="0"/>
+<pin id="151" dir="1" index="2" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Ysize_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="grp_read_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="24" slack="0"/>
+<pin id="156" dir="0" index="1" bw="24" slack="0"/>
+<pin id="157" dir="1" index="2" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Yoffs_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="160" class="1004" name="grp_read_fu_160">
+<pin_list>
+<pin id="161" dir="0" index="0" bw="24" slack="0"/>
+<pin id="162" dir="0" index="1" bw="24" slack="0"/>
+<pin id="163" dir="1" index="2" bw="24" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_DsizeL_V_read/1 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1004" name="grp_read_fu_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="16" slack="0"/>
+<pin id="168" dir="0" index="1" bw="16" slack="0"/>
+<pin id="169" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_PixelF_read/1 "/>
+</bind>
+</comp>
+
+<comp id="172" class="1004" name="grp_read_fu_172">
+<pin_list>
+<pin id="173" dir="0" index="0" bw="16" slack="0"/>
+<pin id="174" dir="0" index="1" bw="16" slack="0"/>
+<pin id="175" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_TapG_read/1 "/>
+</bind>
+</comp>
+
+<comp id="178" class="1004" name="grp_read_fu_178">
+<pin_list>
+<pin id="179" dir="0" index="0" bw="8" slack="0"/>
+<pin id="180" dir="0" index="1" bw="8" slack="0"/>
+<pin id="181" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Flags_read/1 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="grp_read_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="32" slack="0"/>
+<pin id="186" dir="0" index="1" bw="32" slack="0"/>
+<pin id="187" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Timestamp_rea/1 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1004" name="grp_read_fu_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="8" slack="0"/>
+<pin id="192" dir="0" index="1" bw="8" slack="0"/>
+<pin id="193" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_PixProcessing/1 "/>
+</bind>
+</comp>
+
+<comp id="196" class="1004" name="grp_read_fu_196">
+<pin_list>
+<pin id="197" dir="0" index="0" bw="32" slack="0"/>
+<pin id="198" dir="0" index="1" bw="32" slack="0"/>
+<pin id="199" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_ModPixelF_rea/1 "/>
+</bind>
+</comp>
+
+<comp id="202" class="1004" name="grp_read_fu_202">
+<pin_list>
+<pin id="203" dir="0" index="0" bw="32" slack="0"/>
+<pin id="204" dir="0" index="1" bw="32" slack="0"/>
+<pin id="205" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="MetaIn_Status_read/1 "/>
+</bind>
+</comp>
+
+<comp id="208" class="1004" name="StgValue_33_write_fu_208">
+<pin_list>
+<pin id="209" dir="0" index="0" bw="0" slack="0"/>
+<pin id="210" dir="0" index="1" bw="8" slack="0"/>
+<pin id="211" dir="0" index="2" bw="8" slack="0"/>
+<pin id="212" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_33/2 "/>
+</bind>
+</comp>
+
+<comp id="216" class="1004" name="StgValue_34_write_fu_216">
+<pin_list>
+<pin id="217" dir="0" index="0" bw="0" slack="0"/>
+<pin id="218" dir="0" index="1" bw="16" slack="0"/>
+<pin id="219" dir="0" index="2" bw="16" slack="0"/>
+<pin id="220" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_34/2 "/>
+</bind>
+</comp>
+
+<comp id="224" class="1004" name="StgValue_35_write_fu_224">
+<pin_list>
+<pin id="225" dir="0" index="0" bw="0" slack="0"/>
+<pin id="226" dir="0" index="1" bw="24" slack="0"/>
+<pin id="227" dir="0" index="2" bw="24" slack="0"/>
+<pin id="228" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_35/2 "/>
+</bind>
+</comp>
+
+<comp id="232" class="1004" name="StgValue_36_write_fu_232">
+<pin_list>
+<pin id="233" dir="0" index="0" bw="0" slack="0"/>
+<pin id="234" dir="0" index="1" bw="24" slack="0"/>
+<pin id="235" dir="0" index="2" bw="24" slack="0"/>
+<pin id="236" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_36/2 "/>
+</bind>
+</comp>
+
+<comp id="240" class="1004" name="StgValue_37_write_fu_240">
+<pin_list>
+<pin id="241" dir="0" index="0" bw="0" slack="0"/>
+<pin id="242" dir="0" index="1" bw="24" slack="0"/>
+<pin id="243" dir="0" index="2" bw="24" slack="0"/>
+<pin id="244" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_37/2 "/>
+</bind>
+</comp>
+
+<comp id="248" class="1004" name="StgValue_38_write_fu_248">
+<pin_list>
+<pin id="249" dir="0" index="0" bw="0" slack="0"/>
+<pin id="250" dir="0" index="1" bw="24" slack="0"/>
+<pin id="251" dir="0" index="2" bw="24" slack="0"/>
+<pin id="252" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_38/2 "/>
+</bind>
+</comp>
+
+<comp id="256" class="1004" name="StgValue_39_write_fu_256">
+<pin_list>
+<pin id="257" dir="0" index="0" bw="0" slack="0"/>
+<pin id="258" dir="0" index="1" bw="24" slack="0"/>
+<pin id="259" dir="0" index="2" bw="24" slack="0"/>
+<pin id="260" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_39/2 "/>
+</bind>
+</comp>
+
+<comp id="264" class="1004" name="StgValue_40_write_fu_264">
+<pin_list>
+<pin id="265" dir="0" index="0" bw="0" slack="0"/>
+<pin id="266" dir="0" index="1" bw="16" slack="0"/>
+<pin id="267" dir="0" index="2" bw="16" slack="0"/>
+<pin id="268" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_40/2 "/>
+</bind>
+</comp>
+
+<comp id="272" class="1004" name="StgValue_41_write_fu_272">
+<pin_list>
+<pin id="273" dir="0" index="0" bw="0" slack="0"/>
+<pin id="274" dir="0" index="1" bw="16" slack="0"/>
+<pin id="275" dir="0" index="2" bw="16" slack="0"/>
+<pin id="276" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_41/2 "/>
+</bind>
+</comp>
+
+<comp id="280" class="1004" name="StgValue_42_write_fu_280">
+<pin_list>
+<pin id="281" dir="0" index="0" bw="0" slack="0"/>
+<pin id="282" dir="0" index="1" bw="8" slack="0"/>
+<pin id="283" dir="0" index="2" bw="8" slack="0"/>
+<pin id="284" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_42/2 "/>
+</bind>
+</comp>
+
+<comp id="288" class="1004" name="StgValue_43_write_fu_288">
+<pin_list>
+<pin id="289" dir="0" index="0" bw="0" slack="0"/>
+<pin id="290" dir="0" index="1" bw="32" slack="0"/>
+<pin id="291" dir="0" index="2" bw="32" slack="0"/>
+<pin id="292" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_43/2 "/>
+</bind>
+</comp>
+
+<comp id="296" class="1004" name="StgValue_44_write_fu_296">
+<pin_list>
+<pin id="297" dir="0" index="0" bw="0" slack="0"/>
+<pin id="298" dir="0" index="1" bw="8" slack="0"/>
+<pin id="299" dir="0" index="2" bw="8" slack="0"/>
+<pin id="300" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_44/2 "/>
+</bind>
+</comp>
+
+<comp id="304" class="1004" name="StgValue_45_write_fu_304">
+<pin_list>
+<pin id="305" dir="0" index="0" bw="0" slack="0"/>
+<pin id="306" dir="0" index="1" bw="32" slack="0"/>
+<pin id="307" dir="0" index="2" bw="32" slack="0"/>
+<pin id="308" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_45/2 "/>
+</bind>
+</comp>
+
+<comp id="312" class="1004" name="StgValue_46_write_fu_312">
+<pin_list>
+<pin id="313" dir="0" index="0" bw="0" slack="0"/>
+<pin id="314" dir="0" index="1" bw="32" slack="0"/>
+<pin id="315" dir="0" index="2" bw="32" slack="0"/>
+<pin id="316" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="StgValue_46/2 "/>
+</bind>
+</comp>
+
+<comp id="320" class="1004" name="grp_myproject_fu_320">
+<pin_list>
+<pin id="321" dir="0" index="0" bw="0" slack="0"/>
+<pin id="322" dir="0" index="1" bw="128" slack="0"/>
+<pin id="323" dir="0" index="2" bw="4" slack="0"/>
+<pin id="324" dir="0" index="3" bw="128" slack="0"/>
+<pin id="325" dir="0" index="4" bw="4" slack="0"/>
+<pin id="326" dir="0" index="5" bw="128" slack="0"/>
+<pin id="327" dir="0" index="6" bw="1" slack="0"/>
+<pin id="328" dir="0" index="7" bw="12" slack="0"/>
+<pin id="329" dir="0" index="8" bw="12" slack="0"/>
+<pin id="330" dir="0" index="9" bw="12" slack="0"/>
+<pin id="331" dir="0" index="10" bw="12" slack="0"/>
+<pin id="332" dir="0" index="11" bw="12" slack="0"/>
+<pin id="333" dir="0" index="12" bw="12" slack="0"/>
+<pin id="334" dir="0" index="13" bw="12" slack="0"/>
+<pin id="335" dir="0" index="14" bw="12" slack="0"/>
+<pin id="336" dir="1" index="15" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_47/2 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="128"><net_src comp="84" pin="0"/><net_sink comp="124" pin=0"/></net>
+
+<net id="129"><net_src comp="8" pin="0"/><net_sink comp="124" pin=1"/></net>
+
+<net id="134"><net_src comp="86" pin="0"/><net_sink comp="130" pin=0"/></net>
+
+<net id="135"><net_src comp="10" pin="0"/><net_sink comp="130" pin=1"/></net>
+
+<net id="140"><net_src comp="88" pin="0"/><net_sink comp="136" pin=0"/></net>
+
+<net id="141"><net_src comp="12" pin="0"/><net_sink comp="136" pin=1"/></net>
+
+<net id="146"><net_src comp="88" pin="0"/><net_sink comp="142" pin=0"/></net>
+
+<net id="147"><net_src comp="14" pin="0"/><net_sink comp="142" pin=1"/></net>
+
+<net id="152"><net_src comp="88" pin="0"/><net_sink comp="148" pin=0"/></net>
+
+<net id="153"><net_src comp="16" pin="0"/><net_sink comp="148" pin=1"/></net>
+
+<net id="158"><net_src comp="88" pin="0"/><net_sink comp="154" pin=0"/></net>
+
+<net id="159"><net_src comp="18" pin="0"/><net_sink comp="154" pin=1"/></net>
+
+<net id="164"><net_src comp="88" pin="0"/><net_sink comp="160" pin=0"/></net>
+
+<net id="165"><net_src comp="20" pin="0"/><net_sink comp="160" pin=1"/></net>
+
+<net id="170"><net_src comp="86" pin="0"/><net_sink comp="166" pin=0"/></net>
+
+<net id="171"><net_src comp="22" pin="0"/><net_sink comp="166" pin=1"/></net>
+
+<net id="176"><net_src comp="86" pin="0"/><net_sink comp="172" pin=0"/></net>
+
+<net id="177"><net_src comp="24" pin="0"/><net_sink comp="172" pin=1"/></net>
+
+<net id="182"><net_src comp="84" pin="0"/><net_sink comp="178" pin=0"/></net>
+
+<net id="183"><net_src comp="26" pin="0"/><net_sink comp="178" pin=1"/></net>
+
+<net id="188"><net_src comp="90" pin="0"/><net_sink comp="184" pin=0"/></net>
+
+<net id="189"><net_src comp="28" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="194"><net_src comp="84" pin="0"/><net_sink comp="190" pin=0"/></net>
+
+<net id="195"><net_src comp="30" pin="0"/><net_sink comp="190" pin=1"/></net>
+
+<net id="200"><net_src comp="90" pin="0"/><net_sink comp="196" pin=0"/></net>
+
+<net id="201"><net_src comp="32" pin="0"/><net_sink comp="196" pin=1"/></net>
+
+<net id="206"><net_src comp="90" pin="0"/><net_sink comp="202" pin=0"/></net>
+
+<net id="207"><net_src comp="34" pin="0"/><net_sink comp="202" pin=1"/></net>
+
+<net id="213"><net_src comp="92" pin="0"/><net_sink comp="208" pin=0"/></net>
+
+<net id="214"><net_src comp="36" pin="0"/><net_sink comp="208" pin=1"/></net>
+
+<net id="215"><net_src comp="124" pin="2"/><net_sink comp="208" pin=2"/></net>
+
+<net id="221"><net_src comp="94" pin="0"/><net_sink comp="216" pin=0"/></net>
+
+<net id="222"><net_src comp="38" pin="0"/><net_sink comp="216" pin=1"/></net>
+
+<net id="223"><net_src comp="130" pin="2"/><net_sink comp="216" pin=2"/></net>
+
+<net id="229"><net_src comp="96" pin="0"/><net_sink comp="224" pin=0"/></net>
+
+<net id="230"><net_src comp="40" pin="0"/><net_sink comp="224" pin=1"/></net>
+
+<net id="231"><net_src comp="136" pin="2"/><net_sink comp="224" pin=2"/></net>
+
+<net id="237"><net_src comp="96" pin="0"/><net_sink comp="232" pin=0"/></net>
+
+<net id="238"><net_src comp="42" pin="0"/><net_sink comp="232" pin=1"/></net>
+
+<net id="239"><net_src comp="142" pin="2"/><net_sink comp="232" pin=2"/></net>
+
+<net id="245"><net_src comp="96" pin="0"/><net_sink comp="240" pin=0"/></net>
+
+<net id="246"><net_src comp="44" pin="0"/><net_sink comp="240" pin=1"/></net>
+
+<net id="247"><net_src comp="148" pin="2"/><net_sink comp="240" pin=2"/></net>
+
+<net id="253"><net_src comp="96" pin="0"/><net_sink comp="248" pin=0"/></net>
+
+<net id="254"><net_src comp="46" pin="0"/><net_sink comp="248" pin=1"/></net>
+
+<net id="255"><net_src comp="154" pin="2"/><net_sink comp="248" pin=2"/></net>
+
+<net id="261"><net_src comp="96" pin="0"/><net_sink comp="256" pin=0"/></net>
+
+<net id="262"><net_src comp="48" pin="0"/><net_sink comp="256" pin=1"/></net>
+
+<net id="263"><net_src comp="160" pin="2"/><net_sink comp="256" pin=2"/></net>
+
+<net id="269"><net_src comp="94" pin="0"/><net_sink comp="264" pin=0"/></net>
+
+<net id="270"><net_src comp="50" pin="0"/><net_sink comp="264" pin=1"/></net>
+
+<net id="271"><net_src comp="166" pin="2"/><net_sink comp="264" pin=2"/></net>
+
+<net id="277"><net_src comp="94" pin="0"/><net_sink comp="272" pin=0"/></net>
+
+<net id="278"><net_src comp="52" pin="0"/><net_sink comp="272" pin=1"/></net>
+
+<net id="279"><net_src comp="172" pin="2"/><net_sink comp="272" pin=2"/></net>
+
+<net id="285"><net_src comp="92" pin="0"/><net_sink comp="280" pin=0"/></net>
+
+<net id="286"><net_src comp="54" pin="0"/><net_sink comp="280" pin=1"/></net>
+
+<net id="287"><net_src comp="178" pin="2"/><net_sink comp="280" pin=2"/></net>
+
+<net id="293"><net_src comp="98" pin="0"/><net_sink comp="288" pin=0"/></net>
+
+<net id="294"><net_src comp="56" pin="0"/><net_sink comp="288" pin=1"/></net>
+
+<net id="295"><net_src comp="184" pin="2"/><net_sink comp="288" pin=2"/></net>
+
+<net id="301"><net_src comp="92" pin="0"/><net_sink comp="296" pin=0"/></net>
+
+<net id="302"><net_src comp="58" pin="0"/><net_sink comp="296" pin=1"/></net>
+
+<net id="303"><net_src comp="190" pin="2"/><net_sink comp="296" pin=2"/></net>
+
+<net id="309"><net_src comp="98" pin="0"/><net_sink comp="304" pin=0"/></net>
+
+<net id="310"><net_src comp="60" pin="0"/><net_sink comp="304" pin=1"/></net>
+
+<net id="311"><net_src comp="196" pin="2"/><net_sink comp="304" pin=2"/></net>
+
+<net id="317"><net_src comp="98" pin="0"/><net_sink comp="312" pin=0"/></net>
+
+<net id="318"><net_src comp="62" pin="0"/><net_sink comp="312" pin=1"/></net>
+
+<net id="319"><net_src comp="202" pin="2"/><net_sink comp="312" pin=2"/></net>
+
+<net id="337"><net_src comp="100" pin="0"/><net_sink comp="320" pin=0"/></net>
+
+<net id="338"><net_src comp="0" pin="0"/><net_sink comp="320" pin=1"/></net>
+
+<net id="339"><net_src comp="2" pin="0"/><net_sink comp="320" pin=2"/></net>
+
+<net id="340"><net_src comp="4" pin="0"/><net_sink comp="320" pin=3"/></net>
+
+<net id="341"><net_src comp="6" pin="0"/><net_sink comp="320" pin=4"/></net>
+
+<net id="342"><net_src comp="64" pin="0"/><net_sink comp="320" pin=5"/></net>
+
+<net id="343"><net_src comp="66" pin="0"/><net_sink comp="320" pin=6"/></net>
+
+<net id="344"><net_src comp="68" pin="0"/><net_sink comp="320" pin=7"/></net>
+
+<net id="345"><net_src comp="70" pin="0"/><net_sink comp="320" pin=8"/></net>
+
+<net id="346"><net_src comp="72" pin="0"/><net_sink comp="320" pin=9"/></net>
+
+<net id="347"><net_src comp="74" pin="0"/><net_sink comp="320" pin=10"/></net>
+
+<net id="348"><net_src comp="76" pin="0"/><net_sink comp="320" pin=11"/></net>
+
+<net id="349"><net_src comp="78" pin="0"/><net_sink comp="320" pin=12"/></net>
+
+<net id="350"><net_src comp="80" pin="0"/><net_sink comp="320" pin=13"/></net>
+
+<net id="351"><net_src comp="82" pin="0"/><net_sink comp="320" pin=14"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: VideoOut_V_Data_V | {2 3 }
+	Port: VideoOut_V_User_V | {2 3 }
+	Port: MetaOut_StreamId | {2 }
+	Port: MetaOut_SourceTag | {2 }
+	Port: MetaOut_Xsize_V | {2 }
+	Port: MetaOut_Xoffs_V | {2 }
+	Port: MetaOut_Ysize_V | {2 }
+	Port: MetaOut_Yoffs_V | {2 }
+	Port: MetaOut_DsizeL_V | {2 }
+	Port: MetaOut_PixelF | {2 }
+	Port: MetaOut_TapG | {2 }
+	Port: MetaOut_Flags | {2 }
+	Port: MetaOut_Timestamp | {2 }
+	Port: MetaOut_PixProcessingFlgs | {2 }
+	Port: MetaOut_ModPixelF | {2 }
+	Port: MetaOut_Status | {2 }
+	Port: DataBuf_Data_V | {2 3 }
+	Port: arbitrator | {2 3 }
+	Port: buf_V_0 | {2 3 }
+	Port: buf_V_1 | {2 3 }
+	Port: buf_V_2 | {2 3 }
+	Port: buf_V_3 | {2 3 }
+	Port: buf_V_4 | {2 3 }
+	Port: buf_V_5 | {2 3 }
+	Port: buf_V_6 | {2 3 }
+	Port: buf_V_7 | {2 3 }
+ - Input state : 
+	Port: myproject_axi : VideoIn_V_Data_V | {2 3 }
+	Port: myproject_axi : VideoIn_V_User_V | {2 3 }
+	Port: myproject_axi : MetaIn_StreamId | {1 }
+	Port: myproject_axi : MetaIn_SourceTag | {1 }
+	Port: myproject_axi : MetaIn_Xsize_V | {1 }
+	Port: myproject_axi : MetaIn_Xoffs_V | {1 }
+	Port: myproject_axi : MetaIn_Ysize_V | {1 }
+	Port: myproject_axi : MetaIn_Yoffs_V | {1 }
+	Port: myproject_axi : MetaIn_DsizeL_V | {1 }
+	Port: myproject_axi : MetaIn_PixelF | {1 }
+	Port: myproject_axi : MetaIn_TapG | {1 }
+	Port: myproject_axi : MetaIn_Flags | {1 }
+	Port: myproject_axi : MetaIn_Timestamp | {1 }
+	Port: myproject_axi : MetaIn_PixProcessingFlgs | {1 }
+	Port: myproject_axi : MetaIn_ModPixelF | {1 }
+	Port: myproject_axi : MetaIn_Status | {1 }
+	Port: myproject_axi : DataBuf_Data_V | {2 3 }
+	Port: myproject_axi : arbitrator | {2 3 }
+	Port: myproject_axi : buf_V_0 | {2 3 }
+	Port: myproject_axi : buf_V_1 | {2 3 }
+	Port: myproject_axi : buf_V_2 | {2 3 }
+	Port: myproject_axi : buf_V_3 | {2 3 }
+	Port: myproject_axi : buf_V_4 | {2 3 }
+	Port: myproject_axi : buf_V_5 | {2 3 }
+	Port: myproject_axi : buf_V_6 | {2 3 }
+	Port: myproject_axi : buf_V_7 | {2 3 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------|---------|---------|---------|
+| Operation|      Functional Unit     |  Delay  |    FF   |   LUT   |
+|----------|--------------------------|---------|---------|---------|
+|   call   |   grp_myproject_fu_320   |  11.022 |   1049  |   473   |
+|----------|--------------------------|---------|---------|---------|
+|          |      grp_read_fu_124     |    0    |    0    |    0    |
+|          |      grp_read_fu_130     |    0    |    0    |    0    |
+|          |      grp_read_fu_136     |    0    |    0    |    0    |
+|          |      grp_read_fu_142     |    0    |    0    |    0    |
+|          |      grp_read_fu_148     |    0    |    0    |    0    |
+|          |      grp_read_fu_154     |    0    |    0    |    0    |
+|   read   |      grp_read_fu_160     |    0    |    0    |    0    |
+|          |      grp_read_fu_166     |    0    |    0    |    0    |
+|          |      grp_read_fu_172     |    0    |    0    |    0    |
+|          |      grp_read_fu_178     |    0    |    0    |    0    |
+|          |      grp_read_fu_184     |    0    |    0    |    0    |
+|          |      grp_read_fu_190     |    0    |    0    |    0    |
+|          |      grp_read_fu_196     |    0    |    0    |    0    |
+|          |      grp_read_fu_202     |    0    |    0    |    0    |
+|----------|--------------------------|---------|---------|---------|
+|          | StgValue_33_write_fu_208 |    0    |    0    |    0    |
+|          | StgValue_34_write_fu_216 |    0    |    0    |    0    |
+|          | StgValue_35_write_fu_224 |    0    |    0    |    0    |
+|          | StgValue_36_write_fu_232 |    0    |    0    |    0    |
+|          | StgValue_37_write_fu_240 |    0    |    0    |    0    |
+|          | StgValue_38_write_fu_248 |    0    |    0    |    0    |
+|   write  | StgValue_39_write_fu_256 |    0    |    0    |    0    |
+|          | StgValue_40_write_fu_264 |    0    |    0    |    0    |
+|          | StgValue_41_write_fu_272 |    0    |    0    |    0    |
+|          | StgValue_42_write_fu_280 |    0    |    0    |    0    |
+|          | StgValue_43_write_fu_288 |    0    |    0    |    0    |
+|          | StgValue_44_write_fu_296 |    0    |    0    |    0    |
+|          | StgValue_45_write_fu_304 |    0    |    0    |    0    |
+|          | StgValue_46_write_fu_312 |    0    |    0    |    0    |
+|----------|--------------------------|---------|---------|---------|
+|   Total  |                          |  11.022 |   1049  |   473   |
+|----------|--------------------------|---------|---------|---------|
+
+Memories:
++-------+--------+--------+--------+
+|       |  BRAM  |   FF   |   LUT  |
++-------+--------+--------+--------+
+|buf_V_0|    8   |   12   |    0   |
+|buf_V_1|    8   |   12   |    0   |
+|buf_V_2|    8   |   12   |    0   |
+|buf_V_3|    8   |   12   |    0   |
+|buf_V_4|    8   |   12   |    0   |
+|buf_V_5|    8   |   12   |    0   |
+|buf_V_6|    8   |   12   |    0   |
+|buf_V_7|    8   |   12   |    0   |
++-------+--------+--------+--------+
+| Total |   64   |   96   |    0   |
++-------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |  BRAM  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    -   |   11   |  1049  |   473  |
+|   Memory  |   64   |    -   |   96   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   64   |   11   |  1145  |   473  |
++-----------+--------+--------+--------+--------+

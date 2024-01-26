@@ -1,0 +1,943 @@
+INFO-FLOW: Workspace /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035 opened at Tue Jan 23 17:36:20 CST 2024
+Execute   config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute   set_part xcku035-fbva676-2-e -tool vivado 
+Execute     add_library xilinx/kintexu/kintexu:xcku035:-fbva676:-2-e 
+Execute       get_default_platform 
+Execute       license_isbetapart xcku035 
+Command       license_isbetapart done; error code: 1; 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.11 sec.
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 25391} {LUT 203128}    {FF 406256} {DSP48E 1700}   {BRAM 1080}  
+Execute       config_chip_info -quiet -speed medium 
+Command     add_library done; 0.14 sec.
+Execute     add_library xilinx/kintexu/kintexu_fpv7 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcku035-fbva676-2-e'
+Execute     get_default_platform 
+Command   set_part done; 0.24 sec.
+Execute   create_clock -period 2 -name default 
+Execute     config_clock -quiet -name default -period 2 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2ns.
+Execute   set_clock_uncertainty .25 default 
+Execute     config_clock -quiet -name default -uncertainty 0.25 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.25ns.
+Execute   config_compile -no_signed_zeros=0 -unsafe_math_optimizations=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+Execute   config_export -description HLS_myproject_axi -display_name myproject_axi -format ip_catalog -library KCU035 -rtl verilog -vendor Fermilab -version 0.1 -vivado_phys_opt place -vivado_report_level 0 
+Execute   config_schedule -effort high -enable_dsp_full_reg=0 -relax_ii_for_timing=0 -verbose 
+Execute   csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     is_encrypted /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_test.cpp 
+Execute     is_xip /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_test.cpp 
+Execute     is_encrypted /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp 
+Execute     is_xip /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp 
+Execute     is_encrypted /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp 
+Execute     is_xip /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 
+Command     ap_source done; 1.44 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 5.18 sec.
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp"   -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp" 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp
+Command       clang done; 1.14 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.56 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc" -hls  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp"  -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/useless.bc
+Command       clang done; 1.38 sec.
+INFO-FLOW: Done: GCC PP time: 3.1 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/.systemc_flag -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.5 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp std=c++0x -directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/all.directive.json -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.55 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.diag.yml /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject.pp.0.cpp.err.log 
+Command       ap_eval done; 0.5 sec.
+WARNING: [HLS 214-111] Streams will behave like static variables inside a dataflow region: /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:154:26
+Execute       send_msg_by_id WARNING @200-471@%s%s 1 /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp std=c++0x 
+Execute         ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject.pp.0.cpp.err.log 
+Command         ap_eval done; 0.65 sec.
+Execute         ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-legacy-rewriter.myproject.pp.0.cpp.err.log 
+Command         ap_eval done; 0.63 sec.
+Command       tidy_31 done; 1.28 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pragma.1.cpp std=c++0x 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.68 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pragma.2.cpp"  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.bc" 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.pragma.2.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.bc
+Command       clang done; 1.36 sec.
+INFO: [HLS 200-10] Analyzing design file '/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp"   -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp" 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp
+Command       clang done; 1.08 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.56 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc" -hls  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp"  -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/useless.bc
+Command       clang done; 1.41 sec.
+INFO-FLOW: Done: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp std=c++0x -directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/.systemc_flag -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.53 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp std=c++0x -directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/all.directive.json -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 0.64 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject_axi.pp.0.cpp.diag.yml /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject_axi.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-dataflow-lawyer.myproject_axi.pp.0.cpp.err.log 
+Command       ap_eval done; 0.7 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp std=c++0x 
+Execute         ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject_axi.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject_axi.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/tidy-3.1.myproject_axi.pp.0.cpp.err.log 
+Command         ap_eval done; 0.97 sec.
+Execute         ap_eval exec -ignorestderr /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-legacy-rewriter.myproject_axi.pp.0.cpp.out.log 2> /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/xilinx-legacy-rewriter.myproject_axi.pp.0.cpp.err.log 
+Command         ap_eval done; 0.94 sec.
+Command       tidy_31 done; 1.92 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pragma.1.cpp std=c++0x 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command       tidy_31 done; 1.53 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pragma.2.cpp"  -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot" -I "/data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.bc" 
+INFO-FLOW: exec /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.pragma.2.cpp -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot -I /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.bc
+Command       clang done; 1.88 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.g.bc /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.g.bc -hls-opt -except-internalize myproject_axi -L/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/lib -lhlsm -lhlsmc++ -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g 
+Command       llvm-ld done; 0.74 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 529.418 ; gain = 4.242 ; free physical = 15509 ; free virtual = 100181
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 529.418 ; gain = 4.242 ; free physical = 15509 ; free virtual = 100181
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.pp.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.pp.0.bc -disable-opt -L/data/rforelli/Xilinx_2018/Vivado/2018.3/lnx64/lib -lfloatconversion -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.72 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top myproject_axi -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.0.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.13 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 529.703 ; gain = 4.527 ; free physical = 15378 ; free virtual = 100051
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.1.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'meta_data_proc' into 'myproject_axi' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp:19) automatically.
+Command         transform done; 0.17 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.2.prechk.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:72: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 657.691 ; gain = 132.516 ; free physical = 15314 ; free virtual = 99989
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.g.1.bc to /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.1.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'FrameLoop' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:35) in function 'read_pixel_data' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123) in function 'pix_threshold' for pipelining.
+WARNING: [XFORM 203-503] Cannot unroll loop 'WriteInLoop' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:64) in function 'read_pixel_data' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Process_pixel' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:70) in function 'read_pixel_data' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:128) in function 'pix_threshold' completely with a factor of 8.
+INFO: [XFORM 203-602] Inlining function 'meta_data_proc' into 'myproject_axi' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject_axi.cpp:19) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject', detected/extracted 3 process function(s): 
+	 'read_pixel_data'
+	 'pix_threshold'
+	 'send_output'.
+Command         transform done; 0.49 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.1.tmp.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.25 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 657.691 ; gain = 132.516 ; free physical = 15264 ; free virtual = 99940
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.2.bc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'FrameLoop' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:35:7) in function 'read_pixel_data' : 
+
+either the parent loop or sub loop is do-while loop.
+Command         transform done; 0.49 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 721.305 ; gain = 196.129 ; free physical = 15125 ; free virtual = 99800
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.35 sec.
+Command     elaborate done; 21.95 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'myproject_axi' ...
+Execute       ap_set_top_model myproject_axi 
+Execute       get_model_list myproject_axi -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model myproject_axi 
+Execute       preproc_iomode -model myproject 
+Execute       preproc_iomode -model send_output 
+Execute       preproc_iomode -model pix_threshold 
+Execute       preproc_iomode -model read_pixel_data 
+Execute       get_model_list myproject_axi -filter all-wo-channel 
+INFO-FLOW: Model list for configure: read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO-FLOW: Configuring Module : read_pixel_data ...
+Execute       set_default_model read_pixel_data 
+Execute       apply_spec_resource_limit read_pixel_data 
+INFO-FLOW: Configuring Module : pix_threshold ...
+Execute       set_default_model pix_threshold 
+Execute       apply_spec_resource_limit pix_threshold 
+INFO-FLOW: Configuring Module : send_output ...
+Execute       set_default_model send_output 
+Execute       apply_spec_resource_limit send_output 
+INFO-FLOW: Configuring Module : myproject ...
+Execute       set_default_model myproject 
+Execute       apply_spec_resource_limit myproject 
+INFO-FLOW: Configuring Module : myproject_axi ...
+Execute       set_default_model myproject_axi 
+Execute       apply_spec_resource_limit myproject_axi 
+INFO-FLOW: Model list for preprocess: read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO-FLOW: Preprocessing Module: read_pixel_data ...
+Execute       set_default_model read_pixel_data 
+Execute       cdfg_preprocess -model read_pixel_data 
+Execute       rtl_gen_preprocess read_pixel_data 
+INFO-FLOW: Preprocessing Module: pix_threshold ...
+Execute       set_default_model pix_threshold 
+Execute       cdfg_preprocess -model pix_threshold 
+Execute       rtl_gen_preprocess pix_threshold 
+INFO-FLOW: Preprocessing Module: send_output ...
+Execute       set_default_model send_output 
+Execute       cdfg_preprocess -model send_output 
+Execute       rtl_gen_preprocess send_output 
+INFO-FLOW: Preprocessing Module: myproject ...
+Execute       set_default_model myproject 
+Execute       cdfg_preprocess -model myproject 
+Execute       rtl_gen_preprocess myproject 
+INFO-FLOW: Preprocessing Module: myproject_axi ...
+Execute       set_default_model myproject_axi 
+Execute       cdfg_preprocess -model myproject_axi 
+Execute       rtl_gen_preprocess myproject_axi 
+INFO-FLOW: Model list for synthesis: read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_pixel_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model read_pixel_data 
+Execute       schedule -model read_pixel_data 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'WriteInLoop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 27.76 seconds; current allocated memory: 128.040 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.sched.adb -f 
+INFO-FLOW: Finish scheduling read_pixel_data.
+Execute       set_default_model read_pixel_data 
+Execute       bind -model read_pixel_data 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=read_pixel_data
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 128.269 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.bind.adb -f 
+INFO-FLOW: Finish binding read_pixel_data.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pix_threshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pix_threshold 
+Execute       schedule -model pix_threshold 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 128.452 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.sched.adb -f 
+INFO-FLOW: Finish scheduling pix_threshold.
+Execute       set_default_model pix_threshold 
+Execute       bind -model pix_threshold 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=pix_threshold
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 128.833 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.bind.adb -f 
+INFO-FLOW: Finish binding pix_threshold.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'send_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model send_output 
+Execute       schedule -model send_output 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 128.902 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.sched.adb -f 
+INFO-FLOW: Finish scheduling send_output.
+Execute       set_default_model send_output 
+Execute       bind -model send_output 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=send_output
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 129.019 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.bind.adb -f 
+INFO-FLOW: Finish binding send_output.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model myproject 
+Execute       schedule -model myproject 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 129.101 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.sched.adb -f 
+INFO-FLOW: Finish scheduling myproject.
+Execute       set_default_model myproject 
+Execute       bind -model myproject 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=myproject
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 129.271 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.bind.adb -f 
+INFO-FLOW: Finish binding myproject.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model myproject_axi 
+Execute       schedule -model myproject_axi 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 129.484 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.sched.adb -f 
+INFO-FLOW: Finish scheduling myproject_axi.
+Execute       set_default_model myproject_axi 
+Execute       bind -model myproject_axi 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=myproject_axi
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 129.739 MB.
+Execute       report -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.bind.adb -f 
+INFO-FLOW: Finish binding myproject_axi.
+Execute       get_model_list myproject_axi -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess read_pixel_data 
+Execute       rtl_gen_preprocess pix_threshold 
+Execute       rtl_gen_preprocess send_output 
+Execute       rtl_gen_preprocess myproject 
+Execute       rtl_gen_preprocess myproject_axi 
+INFO-FLOW: Model list for RTL generation: read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_pixel_data' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model read_pixel_data -vendor xilinx -mg_file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'DataBuf_Data_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_pixel_data'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 130.050 MB.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       gen_rtl read_pixel_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/systemc/read_pixel_data -synmodules read_pixel_data pix_threshold send_output myproject myproject_axi 
+Execute       gen_rtl read_pixel_data -style xilinx -f -lang vhdl -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/read_pixel_data 
+Execute       gen_rtl read_pixel_data -style xilinx -f -lang vlog -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/verilog/read_pixel_data 
+Execute       gen_tb_info read_pixel_data -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data -p /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db 
+Execute       report -model read_pixel_data -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/read_pixel_data_csynth.rpt -f 
+Execute       report -model read_pixel_data -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/read_pixel_data_csynth.xml -f -x 
+Execute       report -model read_pixel_data -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.verbose.rpt -verbose -f 
+Execute       db_write -model read_pixel_data -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pix_threshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model pix_threshold -vendor xilinx -mg_file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pix_threshold'.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 131.491 MB.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pix_threshold -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/systemc/pix_threshold -synmodules read_pixel_data pix_threshold send_output myproject myproject_axi 
+Execute       gen_rtl pix_threshold -style xilinx -f -lang vhdl -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/pix_threshold 
+Execute       gen_rtl pix_threshold -style xilinx -f -lang vlog -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/verilog/pix_threshold 
+Execute       gen_tb_info pix_threshold -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold -p /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db 
+Execute       report -model pix_threshold -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/pix_threshold_csynth.rpt -f 
+Execute       report -model pix_threshold -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/pix_threshold_csynth.xml -f -x 
+Execute       report -model pix_threshold -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.verbose.rpt -verbose -f 
+Execute       db_write -model pix_threshold -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'send_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model send_output -vendor xilinx -mg_file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'send_output'.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 132.668 MB.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       gen_rtl send_output -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/systemc/send_output -synmodules read_pixel_data pix_threshold send_output myproject myproject_axi 
+Execute       gen_rtl send_output -style xilinx -f -lang vhdl -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/send_output 
+Execute       gen_rtl send_output -style xilinx -f -lang vlog -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/verilog/send_output 
+Execute       gen_tb_info send_output -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output -p /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db 
+Execute       report -model send_output -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/send_output_csynth.rpt -f 
+Execute       report -model send_output -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/send_output_csynth.xml -f -x 
+Execute       report -model send_output -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.verbose.rpt -verbose -f 
+Execute       db_write -model send_output -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model myproject -vendor xilinx -mg_file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 133.416 MB.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       gen_rtl myproject -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/systemc/myproject -synmodules read_pixel_data pix_threshold send_output myproject myproject_axi 
+Execute       gen_rtl myproject -style xilinx -f -lang vhdl -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject 
+Execute       gen_rtl myproject -style xilinx -f -lang vlog -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/verilog/myproject 
+Execute       gen_tb_info myproject -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject -p /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db 
+Execute       report -model myproject -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/myproject_csynth.rpt -f 
+Execute       report -model myproject -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/myproject_csynth.xml -f -x 
+Execute       report -model myproject -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.verbose.rpt -verbose -f 
+Execute       db_write -model myproject -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject_axi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model myproject_axi -vendor xilinx -mg_file /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/VideoIn_V_Data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/VideoIn_V_User_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/VideoOut_V_Data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/VideoOut_V_User_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_StreamId' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_SourceTag' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Xsize_V' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Xoffs_V' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Ysize_V' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Yoffs_V' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_DsizeL_V' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_PixelF' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_TapG' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Flags' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Timestamp' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_PixProcessingFlgs' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_ModPixelF' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaIn_Status' to 'ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_StreamId' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_StreamId' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_SourceTag' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_SourceTag' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Xsize_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Xsize_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Xoffs_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Xoffs_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Ysize_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Ysize_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Yoffs_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Yoffs_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_DsizeL_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_DsizeL_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_PixelF' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_PixelF' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_TapG' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_TapG' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Flags' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Flags' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Timestamp' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Timestamp' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_PixProcessingFlgs' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_PixProcessingFlgs' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_ModPixelF' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_ModPixelF' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'myproject_axi/MetaOut_Status' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'MetaOut_Status' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'myproject_axi' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject_axi'.
+Command       create_rtl_model done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 134.599 MB.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       gen_rtl myproject_axi -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/systemc/myproject_axi -synmodules read_pixel_data pix_threshold send_output myproject myproject_axi 
+Execute       gen_rtl myproject_axi -istop -style xilinx -f -lang vhdl -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject_axi 
+Execute       gen_rtl myproject_axi -istop -style xilinx -f -lang vlog -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/verilog/myproject_axi 
+Execute       export_constraint_db -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.constraint.tcl -f -tool general 
+Execute       report -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.design.xml -verbose -f -dv 
+Command       report done; 0.17 sec.
+Execute       report -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi -p /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db 
+Execute       report -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/myproject_axi_csynth.rpt -f 
+Execute       report -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/syn/report/myproject_axi_csynth.xml -f -x 
+Execute       report -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.verbose.rpt -verbose -f 
+Execute       db_write -model myproject_axi -o /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.adb -f 
+Execute       sc_get_clocks myproject_axi 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain myproject_axi 
+INFO-FLOW: Model list for RTL component generation: read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO-FLOW: Handling components in module [read_pixel_data] ... 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+INFO-FLOW: Handling components in module [pix_threshold] ... 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+INFO-FLOW: Handling components in module [send_output] ... 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+INFO-FLOW: Handling components in module [myproject] ... 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+INFO-FLOW: Found component fifo_w128_d10240_A.
+INFO-FLOW: Append model fifo_w128_d10240_A
+INFO-FLOW: Found component fifo_w4_d10240_A.
+INFO-FLOW: Append model fifo_w4_d10240_A
+INFO-FLOW: Found component fifo_w128_d10240_A.
+INFO-FLOW: Append model fifo_w128_d10240_A
+INFO-FLOW: Found component fifo_w4_d10240_A.
+INFO-FLOW: Append model fifo_w4_d10240_A
+INFO-FLOW: Found component start_for_pix_threshold_U0.
+INFO-FLOW: Append model start_for_pix_threshold_U0
+INFO-FLOW: Found component start_for_send_output_U0.
+INFO-FLOW: Append model start_for_send_output_U0
+INFO-FLOW: Handling components in module [myproject_axi] ... 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+INFO-FLOW: Append model read_pixel_data
+INFO-FLOW: Append model pix_threshold
+INFO-FLOW: Append model send_output
+INFO-FLOW: Append model myproject
+INFO-FLOW: Append model myproject_axi
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fifo_w128_d10240_A fifo_w4_d10240_A fifo_w128_d10240_A fifo_w4_d10240_A start_for_pix_threshold_U0 start_for_send_output_U0 read_pixel_data pix_threshold send_output myproject myproject_axi
+INFO-FLOW: To file: write model fifo_w128_d10240_A
+INFO-FLOW: To file: write model fifo_w4_d10240_A
+INFO-FLOW: To file: write model fifo_w128_d10240_A
+INFO-FLOW: To file: write model fifo_w4_d10240_A
+INFO-FLOW: To file: write model start_for_pix_threshold_U0
+INFO-FLOW: To file: write model start_for_send_output_U0
+INFO-FLOW: To file: write model read_pixel_data
+INFO-FLOW: To file: write model pix_threshold
+INFO-FLOW: To file: write model send_output
+INFO-FLOW: To file: write model myproject
+INFO-FLOW: To file: write model myproject_axi
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=2.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'VideoBuffer_V_Data_V_U(fifo_w128_d10240_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'VideoBuffer_V_User_V_U(fifo_w4_d10240_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'ThresholdOut_V_Data_s_U(fifo_w128_d10240_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'ThresholdOut_V_User_s_U(fifo_w4_d10240_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pix_threshold_U0_U(start_for_pix_threshold_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_send_output_U0_U(start_for_send_output_U0)' using Shift Registers.
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.12 sec.
+Execute           source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+Command       ap_source done; 0.13 sec.
+Execute       source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data/rforelli/Xilinx_2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=myproject_axi xml_exists=0
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.rtl_wrap.cfg.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/read_pixel_data.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/pix_threshold.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/send_output.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.compgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.constraint.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=66
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=32
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=11 #gSsdmPorts=66
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.tbgen.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/myproject_axi.constraint.tcl 
+Execute       sc_get_clocks myproject_axi 
+Execute       source /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/myproject_axi/KCU035/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 721.305 ; gain = 196.129 ; free physical = 14786 ; free virtual = 99483
+INFO: [SYSC 207-301] Generating SystemC RTL for myproject_axi.
+INFO: [VHDL 208-304] Generating VHDL RTL for myproject_axi.
+INFO: [VLOG 209-307] Generating Verilog RTL for myproject_axi.
+Command     autosyn done; 3.04 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 25 sec.
+Execute   cleanup_all 

@@ -1,0 +1,8 @@
+CustomLogic: CustomLogic, 
+axi_dwidth_clk_converter_S128_M512: axi_dwidth_clk_converter_S128_M512, 
+ddr4_v2_2_6_cal_top: ddr4_v2_2_6_cal_top__GC0, ddr4_v2_2_6_cal_pi, ddr4_v2_2_6_cal, 
+ddr4_v2_2_6_cal_pi: ddr4_v2_2_6_cal_pi__GB4, ddr4_v2_2_6_cal_pi__GB3, ddr4_v2_2_6_cal_pi__GB2, ddr4_v2_2_6_cal_pi__GB1, ddr4_v2_2_6_cal_pi__GB0, 
+ddr4_v2_2_6_cal: ddr4_v2_2_6_cal__GC0, ddr4_v2_2_6_cal_addr_decode, 
+ddr4_v2_2_6_cal_addr_decode: ddr4_v2_2_6_cal_addr_decode__GB2, ddr4_v2_2_6_cal_addr_decode__GB1, ddr4_v2_2_6_cal_addr_decode__GB0, 
+ddr4_v2_2_6_mc: ddr4_v2_2_6_mc__GB1, ddr4_v2_2_6_mc__GB0, 
+target_interface: target_interface__GB1, target_interface__GB0, 

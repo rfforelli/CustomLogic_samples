@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Block Memory Generator module tb_top.iCoaxlinkCore.iOnBoardMem.iOnBoardMemory.inst.axi_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [CustomLogic] XSim@(0 ns):Ch=0: Executing 'Ref_MementoEvent_gen'...
+INFO: [CustomLogic] XSim@(40 ns):----: SRST250 => '0'
+INFO: [CustomLogic] XSim@(48 ns):----: Control Interface Write => Address=0x1001, Data=0xAAAAAAAA
+INFO: [CustomLogic] XSim@(80 ns):Ch=0: Executing 'EnableDataStream'...
+INFO: [CustomLogic] XSim@(1004 ns):Ch=0: DataStream enabled
+INFO: [CustomLogic] XSim@(1012 ns):Ch=0: Executing 'FrameRequest'... Requesting 10 frames
+INFO: [CustomLogic] XSim@(1036 ns):Ch=0: Camera readout start. InputTag=0
+INFO: [CustomLogic] XSim@(1112 ns):Ch=0: DMA start. OutputTag=0
+INFO: [CustomLogic] XSim@(71480 ns):Ch=0: Camera readout completed. InputTag=0
+INFO: [CustomLogic] XSim@(71512 ns):Ch=0: Camera readout start. InputTag=1
+INFO: [CustomLogic] XSim@(71576 ns):Ch=0: DMA completed. OutputTag=0

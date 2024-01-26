@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject'
+================================================================
+* Date:           Tue Jan 23 17:36:55 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.534|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.83>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%VideoBuffer_V_Data_V = alloca i128, align 8" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:221]   --->   Operation 7 'alloca' 'VideoBuffer_V_Data_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 10240> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%VideoBuffer_V_User_V = alloca i4, align 1" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:221]   --->   Operation 8 'alloca' 'VideoBuffer_V_User_V' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 10240> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%SubtractionOut_V_Dat = alloca i128, align 8" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:224]   --->   Operation 9 'alloca' 'SubtractionOut_V_Dat' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 10240> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%SubtractionOut_V_Use = alloca i4, align 1" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:224]   --->   Operation 10 'alloca' 'SubtractionOut_V_Use' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 10240> <FIFO>
+ST_1 : Operation 11 [2/2] (0.83ns)   --->   "call fastcc void @read_pixel_data(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoBuffer_V_Data_V, i4* %VideoBuffer_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:227]   --->   Operation 11 'call' <Predicate = true> <Delay = 0.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 12 [1/2] (0.00ns)   --->   "call fastcc void @read_pixel_data(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, i128* %VideoBuffer_V_Data_V, i4* %VideoBuffer_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:227]   --->   Operation 12 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 13 [2/2] (0.00ns)   --->   "call fastcc void @pix_subtract(i128* %VideoBuffer_V_Data_V, i4* %VideoBuffer_V_User_V, i128* %SubtractionOut_V_Dat, i4* %SubtractionOut_V_Use)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:229]   --->   Operation 13 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 14 [1/2] (0.00ns)   --->   "call fastcc void @pix_subtract(i128* %VideoBuffer_V_Data_V, i4* %VideoBuffer_V_User_V, i128* %SubtractionOut_V_Dat, i4* %SubtractionOut_V_Use)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:229]   --->   Operation 14 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 15 [2/2] (0.00ns)   --->   "call fastcc void @send_output(i128* %SubtractionOut_V_Dat, i4* %SubtractionOut_V_Use, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:231]   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.69>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str1) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:219]   --->   Operation 16 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V, [5 x i8]* @p_str312, i32 0, i32 0, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind"   --->   Operation 17 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoIn_V_Data_V, i4* %VideoIn_V_User_V, [5 x i8]* @p_str312, i32 0, i32 0, [5 x i8]* @p_str413, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110, [1 x i8]* @p_str110, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str110, [1 x i8]* @p_str110) nounwind"   --->   Operation 18 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 19 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @VideoBuffer_OC_V_OC_1, i32 1, [1 x i8]* @p_str58, [1 x i8]* @p_str58, i32 10240, i32 10240, i128* %VideoBuffer_V_Data_V, i128* %VideoBuffer_V_Data_V)"   --->   Operation 19 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %VideoBuffer_V_Data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str59, i32 0, i32 0, [1 x i8]* @p_str60, [1 x i8]* @p_str61, [1 x i8]* @p_str62, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str63, [1 x i8]* @p_str64)"   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 21 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @VideoBuffer_OC_V_OC_s, i32 1, [1 x i8]* @p_str65, [1 x i8]* @p_str65, i32 10240, i32 10240, i4* %VideoBuffer_V_User_V, i4* %VideoBuffer_V_User_V)"   --->   Operation 21 'specchannel' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %VideoBuffer_V_User_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str66, i32 0, i32 0, [1 x i8]* @p_str67, [1 x i8]* @p_str68, [1 x i8]* @p_str69, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str70, [1 x i8]* @p_str71)"   --->   Operation 22 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecChannel([24 x i8]* @SubtractionOut_OC_V_1, i32 1, [1 x i8]* @p_str72, [1 x i8]* @p_str72, i32 10240, i32 10240, i128* %SubtractionOut_V_Dat, i128* %SubtractionOut_V_Dat)"   --->   Operation 23 'specchannel' 'empty_16' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %SubtractionOut_V_Dat, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str73, i32 0, i32 0, [1 x i8]* @p_str74, [1 x i8]* @p_str75, [1 x i8]* @p_str76, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str77, [1 x i8]* @p_str78)"   --->   Operation 24 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecChannel([24 x i8]* @SubtractionOut_OC_V_s, i32 1, [1 x i8]* @p_str79, [1 x i8]* @p_str79, i32 10240, i32 10240, i4* %SubtractionOut_V_Use, i4* %SubtractionOut_V_Use)"   --->   Operation 25 'specchannel' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %SubtractionOut_V_Use, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str80, i32 0, i32 0, [1 x i8]* @p_str81, [1 x i8]* @p_str82, [1 x i8]* @p_str83, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str84, [1 x i8]* @p_str85)"   --->   Operation 26 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/2] (0.69ns)   --->   "call fastcc void @send_output(i128* %SubtractionOut_V_Dat, i4* %SubtractionOut_V_Use, i128* %VideoOut_V_Data_V, i4* %VideoOut_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:231]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "ret void" [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:232]   --->   Operation 28 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2ns, clock uncertainty: 0.25ns.
+
+ <State 1>: 0.835ns
+The critical path consists of the following:
+	'alloca' operation ('VideoBuffer.V.Data.V', /home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:221) [18]  (0 ns)
+	'call' operation (/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:227) to 'read_pixel_data' [30]  (0.835 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0.698ns
+The critical path consists of the following:
+	'call' operation (/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/srcs/myproject.cpp:231) to 'send_output' [32]  (0.698 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

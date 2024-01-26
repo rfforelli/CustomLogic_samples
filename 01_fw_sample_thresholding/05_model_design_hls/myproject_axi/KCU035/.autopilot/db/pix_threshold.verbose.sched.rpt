@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vivado HLS Report for 'pix_threshold'
+================================================================
+* Date:           Tue Jan 23 17:36:48 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.575|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  10243|  10243|  10243|  10243|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |- Loop 1  |  10241|  10241|         3|          1|          1|  10240|    yes   |
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (tmp)
+	3  / (!tmp)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.83>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %StreamOut_V_User_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str77, i32 0, i32 0, [1 x i8]* @p_str78, [1 x i8]* @p_str79, [1 x i8]* @p_str80, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str81, [1 x i8]* @p_str82)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %StreamOut_V_Data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str70, i32 0, i32 0, [1 x i8]* @p_str71, [1 x i8]* @p_str72, [1 x i8]* @p_str73, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str74, [1 x i8]* @p_str75)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i4* %StreamIn_V_User_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str63, i32 0, i32 0, [1 x i8]* @p_str64, [1 x i8]* @p_str65, [1 x i8]* @p_str66, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str67, [1 x i8]* @p_str68)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %StreamIn_V_Data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str56, i32 0, i32 0, [1 x i8]* @p_str57, [1 x i8]* @p_str58, [1 x i8]* @p_str59, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str60, [1 x i8]* @p_str61)"   --->   Operation 9 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.83ns)   --->   "br label %0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 10 'br' <Predicate = true> <Delay = 0.83>
+
+State 2 <SV = 1> <Delay = 1.38>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i = phi i14 [ 0, %codeRepl ], [ %i_2, %._crit_edge82.0 ]"   --->   Operation 11 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.01ns)   --->   "%tmp = icmp eq i14 %i, -6144" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 12 'icmp' 'tmp' <Predicate = true> <Delay = 1.01> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10240, i64 10240, i64 10240)"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.38ns)   --->   "%i_2 = add i14 %i, 1" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 14 'add' 'i_2' <Predicate = true> <Delay = 1.38> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %tmp, label %1, label %._crit_edge82.0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.57>
+ST_3 : Operation 16 [1/1] (0.69ns)   --->   "%empty_15 = call { i128, i4 } @_ssdm_op_Read.ap_fifo.volatile.i128P.i4P(i128* %StreamIn_V_Data_V, i4* %StreamIn_V_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:126]   --->   Operation 16 'read' 'empty_15' <Predicate = (!tmp)> <Delay = 0.69> <Core = "FIFO_LUTRAM">   --->   Core 35 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 0> <FIFO>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_Data_V = extractvalue { i128, i4 } %empty_15, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:126]   --->   Operation 17 'extractvalue' 'tmp_Data_V' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_User_V = extractvalue { i128, i4 } %empty_15, 1" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:126]   --->   Operation 18 'extractvalue' 'tmp_User_V' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_8 = trunc i128 %tmp_Data_V to i16" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 19 'trunc' 'tmp_8' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_9 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 11, i32 15)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 20 'partselect' 'tmp_9' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.87ns)   --->   "%icmp = icmp ne i5 %tmp_9, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 21 'icmp' 'icmp' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%p_Result_1 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 16, i32 31)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 22 'partselect' 'p_Result_1' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_10 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 27, i32 31)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 23 'partselect' 'tmp_10' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.87ns)   --->   "%icmp3 = icmp ne i5 %tmp_10, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 24 'icmp' 'icmp3' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%p_Result_2 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 32, i32 47)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 25 'partselect' 'p_Result_2' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_11 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 43, i32 47)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 26 'partselect' 'tmp_11' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.87ns)   --->   "%icmp6 = icmp ne i5 %tmp_11, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 27 'icmp' 'icmp6' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%p_Result_3 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 48, i32 63)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 28 'partselect' 'p_Result_3' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_12 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 59, i32 63)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 29 'partselect' 'tmp_12' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.87ns)   --->   "%icmp9 = icmp ne i5 %tmp_12, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 30 'icmp' 'icmp9' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_4 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 64, i32 79)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 31 'partselect' 'p_Result_4' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_13 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 75, i32 79)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 32 'partselect' 'tmp_13' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.87ns)   --->   "%icmp1 = icmp ne i5 %tmp_13, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 33 'icmp' 'icmp1' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%p_Result_5 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 80, i32 95)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 34 'partselect' 'p_Result_5' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_14 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 91, i32 95)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 35 'partselect' 'tmp_14' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.87ns)   --->   "%icmp2 = icmp ne i5 %tmp_14, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 36 'icmp' 'icmp2' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%p_Result_6 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 96, i32 111)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 37 'partselect' 'p_Result_6' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_15 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 107, i32 111)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 38 'partselect' 'tmp_15' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.87ns)   --->   "%icmp4 = icmp ne i5 %tmp_15, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 39 'icmp' 'icmp4' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%p_Result_7 = call i16 @_ssdm_op_PartSelect.i16.i128.i32.i32(i128 %tmp_Data_V, i32 112, i32 127)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 40 'partselect' 'p_Result_7' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_16 = call i5 @_ssdm_op_PartSelect.i5.i128.i32.i32(i128 %tmp_Data_V, i32 123, i32 127)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 41 'partselect' 'tmp_16' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.87ns)   --->   "%icmp5 = icmp ne i5 %tmp_16, 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 42 'icmp' 'icmp5' <Predicate = (!tmp)> <Delay = 0.87> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.10>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 43 'specregionbegin' 'tmp_3' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:124]   --->   Operation 44 'specpipeline' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.41ns)   --->   "%tmp_V_0_trunc = select i1 %icmp, i16 %tmp_8, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 45 'select' 'tmp_V_0_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 46 [1/1] (0.41ns)   --->   "%tmp_V_1_trunc = select i1 %icmp3, i16 %p_Result_1, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 46 'select' 'tmp_V_1_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 47 [1/1] (0.41ns)   --->   "%tmp_V_2_trunc = select i1 %icmp6, i16 %p_Result_2, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 47 'select' 'tmp_V_2_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 48 [1/1] (0.41ns)   --->   "%tmp_V_3_trunc = select i1 %icmp9, i16 %p_Result_3, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 48 'select' 'tmp_V_3_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 49 [1/1] (0.41ns)   --->   "%tmp_V_4_trunc = select i1 %icmp1, i16 %p_Result_4, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 49 'select' 'tmp_V_4_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.41ns)   --->   "%tmp_V_5_trunc = select i1 %icmp2, i16 %p_Result_5, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 50 'select' 'tmp_V_5_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 51 [1/1] (0.41ns)   --->   "%tmp_V_6_trunc = select i1 %icmp4, i16 %p_Result_6, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 51 'select' 'tmp_V_6_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 52 [1/1] (0.41ns)   --->   "%tmp_V_7_trunc = select i1 %icmp5, i16 %p_Result_7, i16 0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 52 'select' 'tmp_V_7_trunc' <Predicate = (!tmp)> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_Data_V_4 = call i128 @_ssdm_op_BitConcatenate.i128.i16.i16.i16.i16.i16.i16.i16.i16(i16 %tmp_V_7_trunc, i16 %tmp_V_6_trunc, i16 %tmp_V_5_trunc, i16 %tmp_V_4_trunc, i16 %tmp_V_3_trunc, i16 %tmp_V_2_trunc, i16 %tmp_V_1_trunc, i16 %tmp_V_0_trunc)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130]   --->   Operation 53 'bitconcatenate' 'tmp_Data_V_4' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.69ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i128P.i4P(i128* %StreamOut_V_Data_V, i4* %StreamOut_V_User_V, i128 %tmp_Data_V_4, i4 %tmp_User_V)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:135]   --->   Operation 54 'write' <Predicate = (!tmp)> <Delay = 0.69> <Core = "FIFO_LUTRAM">   --->   Core 35 'FIFO_LUTRAM' <Latency = 0> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 0> <FIFO>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_3)" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:136]   --->   Operation 55 'specregionend' 'empty_16' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "br label %0" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123]   --->   Operation 56 'br' <Predicate = (!tmp)> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "ret void" [/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:137]   --->   Operation 57 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2ns, clock uncertainty: 0.25ns.
+
+ <State 1>: 0.835ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123) [11]  (0.835 ns)
+
+ <State 2>: 1.39ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123) [11]  (0 ns)
+	'add' operation ('i', /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:123) [14]  (1.39 ns)
+
+ <State 3>: 1.58ns
+The critical path consists of the following:
+	fifo read on port 'StreamIn_V_Data_V' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:126) [19]  (0.698 ns)
+	'icmp' operation ('icmp', /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130) [24]  (0.877 ns)
+
+ <State 4>: 1.11ns
+The critical path consists of the following:
+	'select' operation ('tmp_V_0_trunc', /home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:130) [25]  (0.411 ns)
+	fifo write on port 'StreamOut_V_Data_V' (/home/rforelli/MSU_work/CustomLogic_samples/01_fw_sample_thresholding/05_model_design_hls/srcs/myproject.cpp:135) [55]  (0.698 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

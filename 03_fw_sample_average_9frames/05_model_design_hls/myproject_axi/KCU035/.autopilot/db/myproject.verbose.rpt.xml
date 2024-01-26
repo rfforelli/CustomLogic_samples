@@ -1,0 +1,126 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Tue Jan 23 17:37:09 2024
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">myproject_axi</item>
+<item name = "Solution">KCU035</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku035-fbva676-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.00, 1.486, 0.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="pix_average_U0">pix_average, 10252, 10252, 10252, 10252, none</column>
+<column name="read_pixel_data_U0">read_pixel_data, ?, ?, ?, ?, none</column>
+<column name="send_output_U0">send_output, 10242, 10242, 10242, 10242, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 2</column>
+<column name="FIFO">150, -, 786, 3284</column>
+<column name="Instance">108, 16, 2399, 1300</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, -, -</column>
+<specialColumn name="Available">1080, 1700, 406256, 203128</specialColumn>
+<specialColumn name="Utilization (%)">23, ~0, ~0, 2</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="pix_average_U0">pix_average, 108, 16, 2225, 994</column>
+<column name="read_pixel_data_U0">read_pixel_data, 0, 0, 153, 175</column>
+<column name="send_output_U0">send_output, 0, 0, 21, 131</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="AveragedOut_V_Data_V_U">72, 234, 1151, 10240, 128, 1310720</column>
+<column name="AveragedOut_V_User_V_U">3, 159, 491, 10240, 4, 40960</column>
+<column name="VideoBuffer_V_Data_V_U">72, 234, 1151, 10240, 128, 1310720</column>
+<column name="VideoBuffer_V_User_V_U">3, 159, 491, 10240, 4, 40960</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="VideoIn_TDATA">in, 128, axis, VideoIn_V_Data_V, pointer</column>
+<column name="VideoIn_TUSER">in, 4, axis, VideoIn_V_User_V, pointer</column>
+<column name="VideoIn_TVALID">in, 1, axis, VideoIn_V_User_V, pointer</column>
+<column name="VideoIn_TREADY">out, 1, axis, VideoIn_V_User_V, pointer</column>
+<column name="VideoOut_TDATA">out, 128, axis, VideoOut_V_Data_V, pointer</column>
+<column name="VideoOut_TUSER">out, 4, axis, VideoOut_V_User_V, pointer</column>
+<column name="VideoOut_TVALID">out, 1, axis, VideoOut_V_User_V, pointer</column>
+<column name="VideoOut_TREADY">in, 1, axis, VideoOut_V_User_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, myproject, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, myproject, return value</column>
+</table>
+</item>
+</section>
+</profile>

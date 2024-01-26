@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vivado HLS Report for 'pix_threshold'
+================================================================
+* Date:           Tue Jan 23 17:36:48 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.575|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  10243|  10243|  10243|  10243|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |- Loop 1  |  10241|  10241|         3|          1|          1|  10240|    yes   |
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     266|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       -|       -|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     102|
+|Register         |        -|      -|     164|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|     164|     368|
++-----------------+---------+-------+--------+--------+
+|Available        |     1080|   1700|  406256|  203128|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |i_2_fu_183_p2                     |     +    |      0|  0|  21|          14|           1|
+    |StreamIn_V_Data_V0_status         |    and   |      0|  0|   2|           1|           1|
+    |StreamOut_V_Data_V1_status        |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter2  |    and   |      0|  0|   2|           1|           1|
+    |icmp1_fu_315_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp2_fu_341_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp3_fu_237_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp4_fu_367_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp5_fu_393_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp6_fu_263_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp9_fu_289_p2                   |   icmp   |      0|  0|  11|           5|           1|
+    |icmp_fu_211_p2                    |   icmp   |      0|  0|  11|           5|           1|
+    |tmp_fu_177_p2                     |   icmp   |      0|  0|  13|          14|          14|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                   |    or    |      0|  0|   2|           1|           1|
+    |tmp_V_0_trunc_fu_399_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_1_trunc_fu_405_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_2_trunc_fu_411_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_3_trunc_fu_417_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_4_trunc_fu_423_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_5_trunc_fu_429_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_6_trunc_fu_435_p3           |  select  |      0|  0|  16|           1|          16|
+    |tmp_V_7_trunc_fu_441_p3           |  select  |      0|  0|  16|           1|          16|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 266|          85|         160|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |StreamIn_V_Data_V_blk_n   |   9|          2|    1|          2|
+    |StreamIn_V_User_V_blk_n   |   9|          2|    1|          2|
+    |StreamOut_V_Data_V_blk_n  |   9|          2|    1|          2|
+    |StreamOut_V_User_V_blk_n  |   9|          2|    1|          2|
+    |ap_NS_fsm                 |  21|          4|    1|          4|
+    |ap_done                   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2   |   9|          2|    1|          2|
+    |i_reg_166                 |   9|          2|   14|         28|
+    |real_start                |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 102|         22|   23|         48|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+----+----+-----+-----------+
+    |            Name           | FF | LUT| Bits| Const Bits|
+    +---------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                  |   3|   0|    3|          0|
+    |ap_done_reg                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2    |   1|   0|    1|          0|
+    |i_reg_166                  |  14|   0|   14|          0|
+    |icmp1_reg_527              |   1|   0|    1|          0|
+    |icmp2_reg_537              |   1|   0|    1|          0|
+    |icmp3_reg_497              |   1|   0|    1|          0|
+    |icmp4_reg_547              |   1|   0|    1|          0|
+    |icmp5_reg_557              |   1|   0|    1|          0|
+    |icmp6_reg_507              |   1|   0|    1|          0|
+    |icmp9_reg_517              |   1|   0|    1|          0|
+    |icmp_reg_487               |   1|   0|    1|          0|
+    |p_Result_1_reg_492         |  16|   0|   16|          0|
+    |p_Result_2_reg_502         |  16|   0|   16|          0|
+    |p_Result_3_reg_512         |  16|   0|   16|          0|
+    |p_Result_4_reg_522         |  16|   0|   16|          0|
+    |p_Result_5_reg_532         |  16|   0|   16|          0|
+    |p_Result_6_reg_542         |  16|   0|   16|          0|
+    |p_Result_7_reg_552         |  16|   0|   16|          0|
+    |start_once_reg             |   1|   0|    1|          0|
+    |tmp_8_reg_482              |  16|   0|   16|          0|
+    |tmp_User_V_reg_477         |   4|   0|    4|          0|
+    |tmp_reg_468                |   1|   0|    1|          0|
+    |tmp_reg_468_pp0_iter1_reg  |   1|   0|    1|          0|
+    +---------------------------+----+----+-----+-----------+
+    |Total                      | 164|   0|  164|          0|
+    +---------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++---------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                     |  in |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_rst                     |  in |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_start                   |  in |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|start_full_n               |  in |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_done                    | out |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_continue                |  in |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_idle                    | out |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|ap_ready                   | out |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|start_out                  | out |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|start_write                | out |    1| ap_ctrl_hs |    pix_threshold   | return value |
+|StreamIn_V_Data_V_dout     |  in |  128|   ap_fifo  |  StreamIn_V_Data_V |    pointer   |
+|StreamIn_V_Data_V_empty_n  |  in |    1|   ap_fifo  |  StreamIn_V_Data_V |    pointer   |
+|StreamIn_V_Data_V_read     | out |    1|   ap_fifo  |  StreamIn_V_Data_V |    pointer   |
+|StreamIn_V_User_V_dout     |  in |    4|   ap_fifo  |  StreamIn_V_User_V |    pointer   |
+|StreamIn_V_User_V_empty_n  |  in |    1|   ap_fifo  |  StreamIn_V_User_V |    pointer   |
+|StreamIn_V_User_V_read     | out |    1|   ap_fifo  |  StreamIn_V_User_V |    pointer   |
+|StreamOut_V_Data_V_din     | out |  128|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_Data_V_full_n  |  in |    1|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_Data_V_write   | out |    1|   ap_fifo  | StreamOut_V_Data_V |    pointer   |
+|StreamOut_V_User_V_din     | out |    4|   ap_fifo  | StreamOut_V_User_V |    pointer   |
+|StreamOut_V_User_V_full_n  |  in |    1|   ap_fifo  | StreamOut_V_User_V |    pointer   |
+|StreamOut_V_User_V_write   | out |    1|   ap_fifo  | StreamOut_V_User_V |    pointer   |
++---------------------------+-----+-----+------------+--------------------+--------------+
+

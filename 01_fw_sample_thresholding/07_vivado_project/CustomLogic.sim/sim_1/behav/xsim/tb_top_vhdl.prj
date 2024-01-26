@@ -1,0 +1,43 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/read_pixel_data.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/pix_threshold.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/send_output.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject_axi.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/fifo_w128_d10240_A.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/fifo_w4_d10240_A.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/start_for_pix_threshold_U0.vhd" \
+"../../../../../05_model_design_hls/myproject_axi/KCU035/syn/vhdl/start_for_send_output_U0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/CounterDsp/sim/CounterDsp.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/FrameSizeDwDsp/sim/FrameSizeDwDsp.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_0/sim/bd_f178_microblaze_I_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_1/sim/bd_f178_rst_0_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_2/sim/bd_f178_ilmb_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_3/sim/bd_f178_dlmb_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_4/sim/bd_f178_dlmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_5/sim/bd_f178_ilmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_7/sim/bd_f178_second_dlmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_8/sim/bd_f178_second_ilmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_10/sim/bd_f178_iomodule_0_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/MultiplierDsp/sim/MultiplierDsp.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_0/sim/bd_5b11_microblaze_I_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_1/sim/bd_5b11_rst_0_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_2/sim/bd_5b11_ilmb_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_3/sim/bd_5b11_dlmb_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_4/sim/bd_5b11_dlmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_5/sim/bd_5b11_ilmb_cntlr_0.vhd" \
+"../../../../CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_7/sim/bd_5b11_iomodule_0_0.vhd" \
+"../../../../../04_ref_design/frame_to_line.vhd" \
+"../../../../../04_ref_design/mem_traffic_gen.vhd" \
+"../../../../../04_ref_design/control_registers.vhd" \
+"../../../../../04_ref_design/pix_lut8b.vhd" \
+"../../../../../04_ref_design/myproject_axi_wrp.vhd" \
+"../../../../../04_ref_design/CustomLogic.vhd" \
+"../../../../../04_ref_design/sim/Simulation_FileIO_pkg.vhd" \
+"../../../../../04_ref_design/sim/CustomLogicSimPkt.vhdp" \
+"../../../../../04_ref_design/sim/SimulationCtrl_tb.vhd" \
+"../../../../../04_ref_design/sim/tb_top.vhd" \
+
+# Do not sort compile order
+nosort

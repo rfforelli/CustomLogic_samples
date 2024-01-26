@@ -1,0 +1,274 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/axi_dwidth_converter_S128_M512/sim/axi_dwidth_converter_S128_M512.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dwidth_converter_S128_M512
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/axi_dwidth_clk_converter_S128_M512/sim/axi_dwidth_clk_converter_S128_M512.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dwidth_clk_converter_S128_M512
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/axi_interconnect_3xS512_M512/sim/axi_interconnect_3xS512_M512.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_interconnect_3xS512_M512
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/axis_data_fifo/sim/axis_data_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_data_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/clk_wiz_1/clk_wiz_1_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_1_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/clk_wiz_1/clk_wiz_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/EventSignalingBram/sim/EventSignalingBram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EventSignalingBram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/EventSignalingFifo_ku/sim/EventSignalingFifo_ku.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EventSignalingFifo_ku
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/ExtIOConfigBram/sim/ExtIOConfigBram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ExtIOConfigBram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/fifo_memento/sim/fifo_memento.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_memento
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/gth_cxp_low/sim/gtwizard_ultrascale_v1_7_gthe3_channel.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_7_5_gthe3_channel
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/gth_cxp_low/sim/gth_cxp_low_gthe3_channel_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gth_cxp_low_gthe3_channel_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/gth_cxp_low/sim/gth_cxp_low_gtwizard_gthe3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gth_cxp_low_gtwizard_gthe3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/gth_cxp_low/sim/gth_cxp_low_gtwizard_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gth_cxp_low_gtwizard_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/gth_cxp_low/sim/gth_cxp_low.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gth_cxp_low
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/LUT12x8/sim/LUT12x8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LUT12x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_6/sim/bd_f178_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f178_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_9/sim/bd_f178_second_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f178_second_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/sim/bd_f178.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_f178
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_0/sim/mem_if_microblaze_mcs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy_behav.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_bitslice_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_fifo_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/iob/ddr4_phy_v2_2_iob_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/iob/ddr4_phy_v2_2_iob.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/clocking/ddr4_phy_v2_2_pll.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_pll
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_tristate_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_tristate_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_riuor_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_riuor_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_control_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_control_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_byte_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_byte_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_bitslice_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_bitslice_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/phy/mem_if_phy_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_phy_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/ip_1/rtl/ip_top/mem_if_phy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_phy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_wtr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_wtr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ref.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ref
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_rd_wr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_rd_wr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_periodic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_periodic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_group.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_group
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_merge_enc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_merge_enc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_fi_xor
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv:125]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_dec_fix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_dec_fix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc_buf
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv:135]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ecc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ecc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_cmd_mux_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_cmd_mux_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_cmd_mux_ap.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_cmd_mux_ap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_arb_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_arb_mux_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_mux_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_arb_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_arb_a.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_arb_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_act_timer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_act_timer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc_act_rank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc_act_rank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/controller/ddr4_v2_2_mc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_mc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ui/ddr4_v2_2_ui_wr_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_wr_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ui/ddr4_v2_2_ui_rd_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_rd_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ui/ddr4_v2_2_ui_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ui/ddr4_v2_2_ui.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_ui
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_ar_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ar_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_aw_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_aw_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_b_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_b_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_cmd_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_cmd_translator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_cmd_translator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_incr_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_incr_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_r_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_r_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_w_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_w_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_wr_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_wr_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_wrap_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_wrap_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_a_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_a_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axi_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_axic_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axic_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_carry_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_carry_latch_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_latch_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_carry_latch_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_latch_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_carry_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_carry_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_command_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_command_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_comparator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_comparator_sel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator_sel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_comparator_sel_static.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_comparator_sel_static
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_r_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_r_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi/ddr4_v2_2_w_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_w_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_addr_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_reg_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_axi_ctrl_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/clocking/ddr4_v2_2_infrastructure.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_infrastructure
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_xsdb_bram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_xsdb_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_wr_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_wr_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_wr_bit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_wr_bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_sync.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_rd_en.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_rd_en
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_pi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_pi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_mc_odt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_mc_odt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_debug_microblaze.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_debug_microblaze
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_cplx_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_cplx_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_cplx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_cplx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_config_rom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_config_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_addr_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal_xsdb_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal_xsdb_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_cal.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cal
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_chipscope_xsdb_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_chipscope_xsdb_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/ddr4_v2_2_dp_AB9.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_cfg_mem_mod
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_6_bram_tdp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/mem_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/mem_if_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/mem_if_ddr4_mem_intfc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_ddr4_mem_intfc
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:942]
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:943]
+WARNING: [VRFC 10-2155] parameter declared inside generate block shall be treated as localparam [../../../../CustomLogic.ip_user_files/ip/mem_if/rtl/ip_top/ddr4_v2_2_6_ddr4_assert.vh:944]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/rtl/cal/mem_if_ddr4_cal_riu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_ddr4_cal_riu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/tb/microblaze_mcs_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_if_microblaze_mcs
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'mem_if_microblaze_mcs' [/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/tb/microblaze_mcs_0.sv:36]
+INFO: [VRFC 10-311] analyzing module microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PEGBram/sim/PEGBram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PEGBram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PEGFifo_ku/sim/PEGFifo_ku.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PEGFifo_ku
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PIXO_FIFO_259x1024/sim/PIXO_FIFO_259x1024.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PIXO_FIFO_259x1024
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_6/sim/bd_5b11_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_5b11_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/sim/bd_5b11.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_5b11
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/sim/PoCXP_uBlaze.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PoCXP_uBlaze
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/reg2mem_rddwc/sim/reg2mem_rddwc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg2mem_rddwc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/reg2mem_rdfifo/sim/reg2mem_rdfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg2mem_rdfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/reg2mem_wrdwc/sim/reg2mem_wrdwc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg2mem_wrdwc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/reg2mem_wrfifo/sim/reg2mem_wrfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg2mem_wrfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/sin_fifo_134bx4k/sim/sin_fifo_134bx4k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sin_fifo_134bx4k
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/sout_fifo/sim/sout_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sout_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/TimingMachineProg_BRAM_72x512/sim/TimingMachineProg_BRAM_72x512.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TimingMachineProg_BRAM_72x512
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/WrAxiAddrFifo/sim/WrAxiAddrFifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WrAxiAddrFifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/lut_bram_8x256/sim/lut_bram_8x256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lut_bram_8x256
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/onboardmem/sim/onboardmem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module onboardmem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

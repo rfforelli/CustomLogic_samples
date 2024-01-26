@@ -1,0 +1,302 @@
+
+
+================================================================
+== Vivado HLS Report for 'myproject_axi'
+================================================================
+* Date:           Tue Jan 23 17:37:10 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        myproject_axi
+* Solution:       KCU035
+* Product family: kintexu
+* Target device:  xcku035-fbva676-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   2.00|     1.486|        0.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+        |                      |           |  Latency  |  Interval | Pipeline |
+        |       Instance       |   Module  | min | max | min | max |   Type   |
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+        |grp_myproject_fu_320  |myproject  |    ?|    ?|    ?|    ?| dataflow |
+        +----------------------+-----------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|      58|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |      258|     16|    3185|    4586|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     393|
+|Register         |        -|      -|    1141|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |      258|     16|    4326|    5037|
++-----------------+---------+-------+--------+--------+
+|Available        |     1080|   1700|  406256|  203128|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |       23|   ~0  |       1|       2|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------+---------+-------+------+------+
+    |       Instance       |   Module  | BRAM_18K| DSP48E|  FF  |  LUT |
+    +----------------------+-----------+---------+-------+------+------+
+    |grp_myproject_fu_320  |myproject  |      258|     16|  3185|  4586|
+    +----------------------+-----------+---------+-------+------+------+
+    |Total                 |           |      258|     16|  3185|  4586|
+    +----------------------+-----------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |VideoIn_V_Data_V_0_load_A              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_Data_V_0_load_B              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_User_V_0_load_A              |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_User_V_0_load_B              |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_Data_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_Data_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_User_V_1_load_A             |    and   |      0|  0|   2|           1|           1|
+    |VideoOut_V_User_V_1_load_B             |    and   |      0|  0|   2|           1|           1|
+    |VideoIn_V_Data_V_0_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |VideoIn_V_User_V_0_state_cmp_full      |   icmp   |      0|  0|   8|           2|           1|
+    |VideoOut_V_Data_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |VideoOut_V_User_V_1_state_cmp_full     |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state2                        |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4                        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_myproject_fu_320_ap_done   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_myproject_fu_320_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |grp_myproject_fu_320_VideoOut_TREADY   |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                  |          |      0|  0|  58|          21|          17|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |MetaIn_DsizeL_V_ap_vld_preg           |   9|          2|    1|          2|
+    |MetaIn_Flags_ap_vld_preg              |   9|          2|    1|          2|
+    |MetaIn_ModPixelF_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_PixProcessingFlgs_ap_vld_preg  |   9|          2|    1|          2|
+    |MetaIn_PixelF_ap_vld_preg             |   9|          2|    1|          2|
+    |MetaIn_SourceTag_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_Status_ap_vld_preg             |   9|          2|    1|          2|
+    |MetaIn_StreamId_ap_vld_preg           |   9|          2|    1|          2|
+    |MetaIn_TapG_ap_vld_preg               |   9|          2|    1|          2|
+    |MetaIn_Timestamp_ap_vld_preg          |   9|          2|    1|          2|
+    |MetaIn_Xoffs_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Xsize_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Yoffs_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaIn_Ysize_V_ap_vld_preg            |   9|          2|    1|          2|
+    |MetaOut_DsizeL_V                      |   9|          2|   24|         48|
+    |MetaOut_Flags                         |   9|          2|    8|         16|
+    |MetaOut_ModPixelF                     |   9|          2|   32|         64|
+    |MetaOut_PixProcessingFlgs             |   9|          2|    8|         16|
+    |MetaOut_PixelF                        |   9|          2|   16|         32|
+    |MetaOut_SourceTag                     |   9|          2|   16|         32|
+    |MetaOut_Status                        |   9|          2|   32|         64|
+    |MetaOut_StreamId                      |   9|          2|    8|         16|
+    |MetaOut_TapG                          |   9|          2|   16|         32|
+    |MetaOut_Timestamp                     |   9|          2|   32|         64|
+    |MetaOut_Xoffs_V                       |   9|          2|   24|         48|
+    |MetaOut_Xsize_V                       |   9|          2|   24|         48|
+    |MetaOut_Yoffs_V                       |   9|          2|   24|         48|
+    |MetaOut_Ysize_V                       |   9|          2|   24|         48|
+    |VideoIn_V_Data_V_0_ack_out            |   9|          2|    1|          2|
+    |VideoIn_V_Data_V_0_data_out           |   9|          2|  128|        256|
+    |VideoIn_V_Data_V_0_state              |  15|          3|    2|          6|
+    |VideoIn_V_User_V_0_ack_out            |   9|          2|    1|          2|
+    |VideoIn_V_User_V_0_data_out           |   9|          2|    4|          8|
+    |VideoIn_V_User_V_0_state              |  15|          3|    2|          6|
+    |VideoOut_V_Data_V_1_data_out          |   9|          2|  128|        256|
+    |VideoOut_V_Data_V_1_state             |  15|          3|    2|          6|
+    |VideoOut_V_User_V_1_data_out          |   9|          2|    4|          8|
+    |VideoOut_V_User_V_1_state             |  15|          3|    2|          6|
+    |ap_NS_fsm                             |  27|          5|    1|          5|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 393|         85|  577|       1165|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |MetaIn_DsizeL_V_ap_vld_preg                |    1|   0|    1|          0|
+    |MetaIn_DsizeL_V_preg                       |   24|   0|   24|          0|
+    |MetaIn_Flags_ap_vld_preg                   |    1|   0|    1|          0|
+    |MetaIn_Flags_preg                          |    8|   0|    8|          0|
+    |MetaIn_ModPixelF_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_ModPixelF_preg                      |   32|   0|   32|          0|
+    |MetaIn_PixProcessingFlgs_ap_vld_preg       |    1|   0|    1|          0|
+    |MetaIn_PixProcessingFlgs_preg              |    8|   0|    8|          0|
+    |MetaIn_PixelF_ap_vld_preg                  |    1|   0|    1|          0|
+    |MetaIn_PixelF_preg                         |   16|   0|   16|          0|
+    |MetaIn_SourceTag_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_SourceTag_preg                      |   16|   0|   16|          0|
+    |MetaIn_Status_ap_vld_preg                  |    1|   0|    1|          0|
+    |MetaIn_Status_preg                         |   32|   0|   32|          0|
+    |MetaIn_StreamId_ap_vld_preg                |    1|   0|    1|          0|
+    |MetaIn_StreamId_preg                       |    8|   0|    8|          0|
+    |MetaIn_TapG_ap_vld_preg                    |    1|   0|    1|          0|
+    |MetaIn_TapG_preg                           |   16|   0|   16|          0|
+    |MetaIn_Timestamp_ap_vld_preg               |    1|   0|    1|          0|
+    |MetaIn_Timestamp_preg                      |   32|   0|   32|          0|
+    |MetaIn_Xoffs_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Xoffs_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Xsize_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Xsize_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Yoffs_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Yoffs_V_preg                        |   24|   0|   24|          0|
+    |MetaIn_Ysize_V_ap_vld_preg                 |    1|   0|    1|          0|
+    |MetaIn_Ysize_V_preg                        |   24|   0|   24|          0|
+    |MetaOut_DsizeL_V_preg                      |   24|   0|   24|          0|
+    |MetaOut_Flags_preg                         |    8|   0|    8|          0|
+    |MetaOut_ModPixelF_preg                     |   32|   0|   32|          0|
+    |MetaOut_PixProcessingFlgs_preg             |    8|   0|    8|          0|
+    |MetaOut_PixelF_preg                        |   16|   0|   16|          0|
+    |MetaOut_SourceTag_preg                     |   16|   0|   16|          0|
+    |MetaOut_Status_preg                        |   32|   0|   32|          0|
+    |MetaOut_StreamId_preg                      |    8|   0|    8|          0|
+    |MetaOut_TapG_preg                          |   16|   0|   16|          0|
+    |MetaOut_Timestamp_preg                     |   32|   0|   32|          0|
+    |MetaOut_Xoffs_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Xsize_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Yoffs_V_preg                       |   24|   0|   24|          0|
+    |MetaOut_Ysize_V_preg                       |   24|   0|   24|          0|
+    |VideoIn_V_Data_V_0_payload_A               |  128|   0|  128|          0|
+    |VideoIn_V_Data_V_0_payload_B               |  128|   0|  128|          0|
+    |VideoIn_V_Data_V_0_sel_rd                  |    1|   0|    1|          0|
+    |VideoIn_V_Data_V_0_sel_wr                  |    1|   0|    1|          0|
+    |VideoIn_V_Data_V_0_state                   |    2|   0|    2|          0|
+    |VideoIn_V_User_V_0_payload_A               |    4|   0|    4|          0|
+    |VideoIn_V_User_V_0_payload_B               |    4|   0|    4|          0|
+    |VideoIn_V_User_V_0_sel_rd                  |    1|   0|    1|          0|
+    |VideoIn_V_User_V_0_sel_wr                  |    1|   0|    1|          0|
+    |VideoIn_V_User_V_0_state                   |    2|   0|    2|          0|
+    |VideoOut_V_Data_V_1_payload_A              |  128|   0|  128|          0|
+    |VideoOut_V_Data_V_1_payload_B              |  128|   0|  128|          0|
+    |VideoOut_V_Data_V_1_sel_rd                 |    1|   0|    1|          0|
+    |VideoOut_V_Data_V_1_sel_wr                 |    1|   0|    1|          0|
+    |VideoOut_V_Data_V_1_state                  |    2|   0|    2|          0|
+    |VideoOut_V_User_V_1_payload_A              |    4|   0|    4|          0|
+    |VideoOut_V_User_V_1_payload_B              |    4|   0|    4|          0|
+    |VideoOut_V_User_V_1_sel_rd                 |    1|   0|    1|          0|
+    |VideoOut_V_User_V_1_sel_wr                 |    1|   0|    1|          0|
+    |VideoOut_V_User_V_1_state                  |    2|   0|    2|          0|
+    |ap_CS_fsm                                  |    4|   0|    4|          0|
+    |ap_sync_reg_grp_myproject_fu_320_ap_done   |    1|   0|    1|          0|
+    |ap_sync_reg_grp_myproject_fu_320_ap_ready  |    1|   0|    1|          0|
+    |grp_myproject_fu_320_ap_start_reg          |    1|   0|    1|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      | 1141|   0| 1141|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                           |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_rst_n                         |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_start                         |  in |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_done                          | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_idle                          | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|ap_ready                         | out |    1| ap_ctrl_hs |       myproject_axi       | return value |
+|VideoIn_TDATA                    |  in |  128|    axis    |      VideoIn_V_Data_V     |    pointer   |
+|VideoIn_TVALID                   |  in |    1|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoIn_TREADY                   | out |    1|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoIn_TUSER                    |  in |    4|    axis    |      VideoIn_V_User_V     |    pointer   |
+|VideoOut_TDATA                   | out |  128|    axis    |     VideoOut_V_Data_V     |    pointer   |
+|VideoOut_TVALID                  | out |    1|    axis    |     VideoOut_V_User_V     |    pointer   |
+|VideoOut_TREADY                  |  in |    1|    axis    |     VideoOut_V_User_V     |    pointer   |
+|VideoOut_TUSER                   | out |    4|    axis    |     VideoOut_V_User_V     |    pointer   |
+|MetaIn_StreamId                  |  in |    8|   ap_vld   |      MetaIn_StreamId      |    pointer   |
+|MetaIn_StreamId_ap_vld           |  in |    1|   ap_vld   |      MetaIn_StreamId      |    pointer   |
+|MetaIn_SourceTag                 |  in |   16|   ap_vld   |      MetaIn_SourceTag     |    pointer   |
+|MetaIn_SourceTag_ap_vld          |  in |    1|   ap_vld   |      MetaIn_SourceTag     |    pointer   |
+|MetaIn_Xsize_V                   |  in |   24|   ap_vld   |       MetaIn_Xsize_V      |    pointer   |
+|MetaIn_Xsize_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Xsize_V      |    pointer   |
+|MetaIn_Xoffs_V                   |  in |   24|   ap_vld   |       MetaIn_Xoffs_V      |    pointer   |
+|MetaIn_Xoffs_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Xoffs_V      |    pointer   |
+|MetaIn_Ysize_V                   |  in |   24|   ap_vld   |       MetaIn_Ysize_V      |    pointer   |
+|MetaIn_Ysize_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Ysize_V      |    pointer   |
+|MetaIn_Yoffs_V                   |  in |   24|   ap_vld   |       MetaIn_Yoffs_V      |    pointer   |
+|MetaIn_Yoffs_V_ap_vld            |  in |    1|   ap_vld   |       MetaIn_Yoffs_V      |    pointer   |
+|MetaIn_DsizeL_V                  |  in |   24|   ap_vld   |      MetaIn_DsizeL_V      |    pointer   |
+|MetaIn_DsizeL_V_ap_vld           |  in |    1|   ap_vld   |      MetaIn_DsizeL_V      |    pointer   |
+|MetaIn_PixelF                    |  in |   16|   ap_vld   |       MetaIn_PixelF       |    pointer   |
+|MetaIn_PixelF_ap_vld             |  in |    1|   ap_vld   |       MetaIn_PixelF       |    pointer   |
+|MetaIn_TapG                      |  in |   16|   ap_vld   |        MetaIn_TapG        |    pointer   |
+|MetaIn_TapG_ap_vld               |  in |    1|   ap_vld   |        MetaIn_TapG        |    pointer   |
+|MetaIn_Flags                     |  in |    8|   ap_vld   |        MetaIn_Flags       |    pointer   |
+|MetaIn_Flags_ap_vld              |  in |    1|   ap_vld   |        MetaIn_Flags       |    pointer   |
+|MetaIn_Timestamp                 |  in |   32|   ap_vld   |      MetaIn_Timestamp     |    pointer   |
+|MetaIn_Timestamp_ap_vld          |  in |    1|   ap_vld   |      MetaIn_Timestamp     |    pointer   |
+|MetaIn_PixProcessingFlgs         |  in |    8|   ap_vld   |  MetaIn_PixProcessingFlgs |    pointer   |
+|MetaIn_PixProcessingFlgs_ap_vld  |  in |    1|   ap_vld   |  MetaIn_PixProcessingFlgs |    pointer   |
+|MetaIn_ModPixelF                 |  in |   32|   ap_vld   |      MetaIn_ModPixelF     |    pointer   |
+|MetaIn_ModPixelF_ap_vld          |  in |    1|   ap_vld   |      MetaIn_ModPixelF     |    pointer   |
+|MetaIn_Status                    |  in |   32|   ap_vld   |       MetaIn_Status       |    pointer   |
+|MetaIn_Status_ap_vld             |  in |    1|   ap_vld   |       MetaIn_Status       |    pointer   |
+|MetaOut_StreamId                 | out |    8|   ap_none  |      MetaOut_StreamId     |    pointer   |
+|MetaOut_SourceTag                | out |   16|   ap_none  |     MetaOut_SourceTag     |    pointer   |
+|MetaOut_Xsize_V                  | out |   24|   ap_none  |      MetaOut_Xsize_V      |    pointer   |
+|MetaOut_Xoffs_V                  | out |   24|   ap_none  |      MetaOut_Xoffs_V      |    pointer   |
+|MetaOut_Ysize_V                  | out |   24|   ap_none  |      MetaOut_Ysize_V      |    pointer   |
+|MetaOut_Yoffs_V                  | out |   24|   ap_none  |      MetaOut_Yoffs_V      |    pointer   |
+|MetaOut_DsizeL_V                 | out |   24|   ap_none  |      MetaOut_DsizeL_V     |    pointer   |
+|MetaOut_PixelF                   | out |   16|   ap_none  |       MetaOut_PixelF      |    pointer   |
+|MetaOut_TapG                     | out |   16|   ap_none  |        MetaOut_TapG       |    pointer   |
+|MetaOut_Flags                    | out |    8|   ap_none  |       MetaOut_Flags       |    pointer   |
+|MetaOut_Timestamp                | out |   32|   ap_none  |     MetaOut_Timestamp     |    pointer   |
+|MetaOut_PixProcessingFlgs        | out |    8|   ap_none  | MetaOut_PixProcessingFlgs |    pointer   |
+|MetaOut_ModPixelF                | out |   32|   ap_none  |     MetaOut_ModPixelF     |    pointer   |
+|MetaOut_Status                   | out |   32|   ap_none  |       MetaOut_Status      |    pointer   |
++---------------------------------+-----+-----+------------+---------------------------+--------------+
+

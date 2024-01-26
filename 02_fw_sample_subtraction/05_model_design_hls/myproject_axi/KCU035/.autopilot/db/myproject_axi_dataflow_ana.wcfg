@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="myproject_axi.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_myproject_axi_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="AESL_inst_myproject_axi_group">
+      <obj_property name="label">AESL_inst_myproject_axi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="grp_myproject_fu_320_group">
+         <obj_property name="label">grp_myproject_fu_320</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/read_pixel_data_U0_activity">
+            <obj_property name="ElementShortName">read_pixel_data_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">read_pixel_data_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/pix_subtract_U0_activity">
+            <obj_property name="ElementShortName">pix_subtract_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">pix_subtract_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/send_output_U0_activity">
+            <obj_property name="ElementShortName">send_output_U0_activity</obj_property>
+            <obj_property name="ObjectShortName">send_output_U0_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="read_pixel_data_U0_group">
+            <obj_property name="label">read_pixel_data_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="read_pixel_data_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="read_pixel_data_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="read_pixel_data_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="StreamOut_V_Data_V_group">
+                  <obj_property name="label">StreamOut_V_Data_V(VideoBuffer_V_Data_V_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_Data_V_blk_n">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_Data_V_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_Data_V_full_n">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_full_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_Data_V_write">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_write</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_write</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="StreamOut_V_User_V_group">
+                  <obj_property name="label">StreamOut_V_User_V(VideoBuffer_V_User_V_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_User_V_blk_n">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_User_V_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_User_V_full_n">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_full_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/read_pixel_data_U0/StreamOut_V_User_V_write">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_write</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_write</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="pix_subtract_U0_group">
+            <obj_property name="label">pix_subtract_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="pix_subtract_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="StreamIn_V_Data_V_group">
+                  <obj_property name="label">StreamIn_V_Data_V(VideoBuffer_V_Data_V_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_Data_V_blk_n">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_Data_V_dout">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_dout[127:0]</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_dout[127:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_Data_V_empty_n">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_Data_V_read">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_read</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_read</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="StreamIn_V_User_V_group">
+                  <obj_property name="label">StreamIn_V_User_V(VideoBuffer_V_User_V_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_User_V_blk_n">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_User_V_dout">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_dout[3:0]</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_dout[3:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_User_V_empty_n">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamIn_V_User_V_read">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_read</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_read</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="pix_subtract_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="pix_subtract_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="StreamOut_V_Data_V_group">
+                  <obj_property name="label">StreamOut_V_Data_V(SubtractionOut_V_Dat_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_Data_V_blk_n">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_Data_V_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_Data_V_full_n">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_full_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_Data_V_write">
+                     <obj_property name="ElementShortName">StreamOut_V_Data_V_write</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_Data_V_write</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="StreamOut_V_User_V_group">
+                  <obj_property name="label">StreamOut_V_User_V(SubtractionOut_V_Use_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_User_V_blk_n">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_User_V_din">
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_User_V_full_n">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_full_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_full_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/pix_subtract_U0/StreamOut_V_User_V_write">
+                     <obj_property name="ElementShortName">StreamOut_V_User_V_write</obj_property>
+                     <obj_property name="ObjectShortName">StreamOut_V_User_V_write</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="send_output_U0_group">
+            <obj_property name="label">send_output_U0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="send_output_U0_Input_group">
+               <obj_property name="label">Input Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="StreamIn_V_Data_V_group">
+                  <obj_property name="label">StreamIn_V_Data_V(SubtractionOut_V_Dat_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_Data_V_blk_n">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_Data_V_dout">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_dout[127:0]</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_dout[127:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_Data_V_empty_n">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_Data_V_read">
+                     <obj_property name="ElementShortName">StreamIn_V_Data_V_read</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_Data_V_read</obj_property>
+                  </wvobject>
+               </wvobject>
+               <wvobject type="group" fp_name="StreamIn_V_User_V_group">
+                  <obj_property name="label">StreamIn_V_User_V(SubtractionOut_V_Use_U, FIFO)</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_User_V_blk_n">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_blk_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_blk_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_User_V_dout">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_dout[3:0]</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_dout[3:0]</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_User_V_empty_n">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_empty_n</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_empty_n</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/StreamIn_V_User_V_read">
+                     <obj_property name="ElementShortName">StreamIn_V_User_V_read</obj_property>
+                     <obj_property name="ObjectShortName">StreamIn_V_User_V_read</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="send_output_U0_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_myproject_axi_top/AESL_inst_myproject_axi/grp_myproject_fu_320/send_output_U0/ap_continue">
+                  <obj_property name="ElementShortName">ap_continue</obj_property>
+                  <obj_property name="ObjectShortName">ap_continue</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="send_output_U0_Output_group">
+               <obj_property name="label">Output Channels</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

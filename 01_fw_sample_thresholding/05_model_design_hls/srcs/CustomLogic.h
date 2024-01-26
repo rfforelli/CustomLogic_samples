@@ -5,8 +5,7 @@
 #include "ap_fixed.h"
 
 #define IMAGE_HEIGHT 320
-// #define IMAGE_WIDTH 256
-#define IMAGE_WIDTH 260
+#define IMAGE_WIDTH 256
 #define STREAM_DATA_WIDTH 128
 
 typedef struct Metadata_struct {

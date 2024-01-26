@@ -1,0 +1,89 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/read_pixel_data.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'read_pixel_data'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/pix_subtract.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pix_subtract'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/send_output.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'send_output'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'myproject'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/myproject_axi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'myproject_axi'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/pix_subtract_buf_V_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pix_subtract_buf_V_0_ram'
+INFO: [VRFC 10-3107] analyzing entity 'pix_subtract_buf_V_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/fifo_w128_d10240_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w128_d10240_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/fifo_w4_d10240_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w4_d10240_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/start_for_pix_subtract_U0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_pix_subtract_U0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_pix_subtract_U0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/05_model_design_hls/myproject_axi/KCU035/syn/vhdl/start_for_send_output_U0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_send_output_U0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_send_output_U0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/CounterDsp/sim/CounterDsp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CounterDsp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/FrameSizeDwDsp/sim/FrameSizeDwDsp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FrameSizeDwDsp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_0/sim/bd_f178_microblaze_I_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_microblaze_I_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_1/sim/bd_f178_rst_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_rst_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_2/sim/bd_f178_ilmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_ilmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_3/sim/bd_f178_dlmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_dlmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_4/sim/bd_f178_dlmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_dlmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_5/sim/bd_f178_ilmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_ilmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_7/sim/bd_f178_second_dlmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_second_dlmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_8/sim/bd_f178_second_ilmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_second_ilmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/mem_if/bd_0/ip/ip_10/sim/bd_f178_iomodule_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_f178_iomodule_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/MultiplierDsp/sim/MultiplierDsp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MultiplierDsp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_0/sim/bd_5b11_microblaze_I_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_microblaze_I_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_1/sim/bd_5b11_rst_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_rst_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_2/sim/bd_5b11_ilmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_ilmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_3/sim/bd_5b11_dlmb_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_dlmb_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_4/sim/bd_5b11_dlmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_dlmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_5/sim/bd_5b11_ilmb_cntlr_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_ilmb_cntlr_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/07_vivado_project/CustomLogic.ip_user_files/ip/PoCXP_uBlaze/bd_0/ip/ip_7/sim/bd_5b11_iomodule_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_5b11_iomodule_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/frame_to_line.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'frame_to_line'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/mem_traffic_gen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mem_traffic_gen'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/control_registers.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_registers'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/pix_lut8b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pix_lut8b'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/myproject_axi_wrp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'myproject_axi_wrp'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/CustomLogic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CustomLogic'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/sim/Simulation_FileIO_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/sim/CustomLogicSimPkt.vhdp" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tl_trans_gen_rd_file'
+INFO: [VRFC 10-3107] analyzing entity 'tl_channel'
+INFO: [VRFC 10-3107] analyzing entity 'acquisition_ctrl_fsm'
+INFO: [VRFC 10-3107] analyzing entity 'acquisition_ctrl_tb'
+INFO: [VRFC 10-3107] analyzing entity 'onboardmem_tb'
+INFO: [VRFC 10-3107] analyzing entity 'frontend_tb'
+INFO: [VRFC 10-3107] analyzing entity 'backend_tb'
+INFO: [VRFC 10-3107] analyzing entity 'memento_tb'
+INFO: [VRFC 10-3107] analyzing entity 'PostEventGenerator_tb'
+INFO: [VRFC 10-3107] analyzing entity 'CoaxlinkCore_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/sim/SimulationCtrl_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SimulationCtrl_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rforelli/MSU_work/CustomLogic_samples/02_fw_sample_subtraction/04_ref_design/sim/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'
