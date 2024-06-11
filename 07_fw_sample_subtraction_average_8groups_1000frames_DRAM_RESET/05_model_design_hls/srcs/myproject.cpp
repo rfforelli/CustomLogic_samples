@@ -143,9 +143,13 @@ void pix_average(hls::stream<video_if_t> &StreamIn, hls::stream<video_if_t> &Str
   static video_if_t sub_res; // Subtraction result packet
 
   if(customlogic_reset == 0){ // reset
+    StreamIn >> DataOut; // read CoaXPress packet
+    StreamOut << DataOut; // Send output packet
+
     arbitrator = 0;
     dram_wr_idx = 0;
     dram_group_idx = 0;
+
   }else{
     ImageLoop:
     for(unsigned i = 0; i < ((IMAGE_HEIGHT * IMAGE_WIDTH) / MONO16PIX_NBR); i++){ // Loop through the data stream These image dims MUST match eGrabber
