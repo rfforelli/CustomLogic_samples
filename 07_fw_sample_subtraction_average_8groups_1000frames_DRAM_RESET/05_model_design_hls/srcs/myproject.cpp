@@ -142,7 +142,7 @@ void pix_average(hls::stream<video_if_t> &StreamIn, hls::stream<video_if_t> &Str
   static video_if_t temp; // Buffer packet
   static video_if_t sub_res; // Subtraction result packet
 
-  if(customlogic_reset == 0){ // reset
+  if(customlogic_reset == 1){ // reset
     StreamIn >> DataOut; // read CoaXPress packet
     StreamOut << DataOut; // Send output packet
 
