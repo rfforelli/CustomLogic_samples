@@ -284,7 +284,7 @@ begin
             m_axi_gmem0_BID           => (others=>'0'),
             m_axi_gmem0_BUSER         => (others=>'0'),
             onboard_mem_base_V        => onboard_mem_base,
-            customlogic_reset_v       => customlogic_reset_v);   
+            customlogic_reset_V       => customlogic_reset_V);   
 
   -- -- Parse control requests
   -- control_request1 <= Request_V(11 downto 0);
